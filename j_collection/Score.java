@@ -1,4 +1,5 @@
-package j_collection;
+package Score;
+
 
 import java.util.ArrayList;
 
@@ -120,15 +121,26 @@ public class Score {
 		System.out.print(mainname.get(i)+"\t");
 		}
 		System.out.println();
-		//두번째 줄 출력
+		//이후 석차까지 출력
 		for(int i = 0; i <human.size(); i++) {
 		System.out.print(human.get(i));
 		for(int j = 0; j < scores.get(i).size(); j++) {
 		System.out.print("\t" + scores.get(i).get(j)); //j = 1234567
 		}
-		System.out.print("\t" + sum);
+		System.out.print("\t" + sums.get(i) + "\t" + avgs.get(i) + "\t" + rank.get(i));
 		System.out.println();
 		}
+		
+		System.out.print("과목합계");
+		for(int i = 0; i < sum3.size(); i++) {
+			System.out.print("\t" + sum3.get(i));
+		}
+		
+		System.out.print("\n과목평균");
+		for(int i = 0; i < avg3.size(); i++) {
+			System.out.print("\t" + avg3.get(i));
+		}
+		
 		
 		
 		
