@@ -149,13 +149,13 @@
         AND A.PROD_ID=TBLA.APID;
         
         SELECT BUY_PROD,
-        PROD_NAME,
-        PROD_LGU
+               PROD_NAME,
+               PROD_LGU
         FROM BUYPROD,PROD
         WHERE BUY_DATE BETWEEN TO_DATE('20050101') AND TO_DATE('20050131')
-        AND BUY_PROD NOT IN (SELECT DISTINCT BUY_PROD AS BPID
-        FROM BUYPROD
-        WHERE BUY_DATE BETWEEN TO_DATE('20050401')
-        AND TO_DATE('20050430'))
-        AND PROD_ID=BUY_PROD
+                                AND BUY_PROD NOT IN (SELECT DISTINCT BUY_PROD AS BPID
+                                                       FROM BUYPROD
+                                                      WHERE BUY_DATE BETWEEN TO_DATE('20050401')
+                                                        AND TO_DATE('20050430'))
+                                                        AND PROD_ID=BUY_PROD
         
