@@ -1,0 +1,49 @@
+사용예)날짜와 회원번호를 입력받아 장바구니번호를 생성하시오
+      CREATE OR REPLACE FUNCTION FN_CREATE_CARTNO(
+        P_DATE VARCHAR2,
+        P_MID MEMBER.MEM_ID%TYPE)
+        RETURN VARCHAR2
+      IS
+        V_CNT NUMBER:=0; --자료의 수
+        V_CARTNO VARCHAR2(13); --임시장바구니번호
+        V_MEM_ID MEMBER.MEM_ID%TYPE; --임의의 날짜에 가장큰 장바구니번호를 
+                                     --부여받은 회원번호
+      BEGIN
+        SELECT COUNT(*) INTO V_CNT
+          FROM CART
+         WHERE CART_NO LIKE P_DATE||'%'; 
+        
+        IF V_CNT != 0 THEN
+           SELECT MAX(CART_NO) INTO V_CARTNO
+             FROM CART
+            WHERE CART_NO LIKE P_DATE||'%';
+            
+           SELECT DISTINCT CART_MEMBER INTO V_MEM_ID
+             FROM CART
+            WHERE CART_NO=V_CARTNO; 
+        END IF;
+        
+        IF V_MEM_ID != P_MID THEN
+           V_CARTNO:=V_CARTNO+1;
+        END IF;
+        
+        IF V_CNT=0 THEN
+           V_CARTNO:=P_DATE||'00001';
+        END IF;   
+        RETURN V_CARTNO; 
+      END;
+
+ (실행)
+      SELECT FN_CREATE_CARTNO('20050501','b001')
+        FROM DUAL;
+        
+      SELECT FN_CREATE_CARTNO('20050501','c001')
+        FROM DUAL;  
+      
+      SELECT FN_CREATE_CARTNO('20050502','c001')
+        FROM DUAL; 
+
+
+        
+        
+        
