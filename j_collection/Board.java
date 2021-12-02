@@ -77,9 +77,10 @@ public class Board {
 					for(int j = 0; j < main.size();j++) {
 						if((int)main.get(j).get("number") == input) {
 						main.remove(j);
-						main.set(j,boardsave.save(input));
-						
 						}
+					}
+					for(int k = 0; i < main.size();i++) {
+					main.set(k,boardsave.remove(i));
 					}
 					break;
 				case 3 : //목록

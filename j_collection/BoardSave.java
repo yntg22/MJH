@@ -75,4 +75,11 @@ public class BoardSave {
 		return save;
 	}
 	
+	HashMap remove(int i) {
+		
+		save.put("number",i);
+		
+		return save;
+	}
+	
 }

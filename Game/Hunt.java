@@ -2,8 +2,6 @@ package Game;
 
 import java.util.Scanner;
 
-import e_oop.ScanUtil;
-
 public class Hunt {
 	Scanner s = new Scanner(System.in);
 	void hunt(Character n, Monster m) {

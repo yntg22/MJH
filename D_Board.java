@@ -1,4 +1,4 @@
-package i_collection;
+
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -144,6 +144,8 @@ public class D_Board {
 		boardTable.add(board);
 		
 		System.out.println("작성하신 게시글이 등록되었습니다.");
+		
+		
 	}
 
 }

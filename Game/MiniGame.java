@@ -2,8 +2,6 @@ package Game;
 
 import java.util.Scanner;
 
-import e_oop.ScanUtil;
-
 public class MiniGame {
 	Scanner s = new Scanner(System.in);
 	String[] card = new String[] {"1", "2", "3", "4", "5", "6","7"};
