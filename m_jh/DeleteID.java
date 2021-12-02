@@ -11,6 +11,8 @@ package m_jh;
 
 		public static void main(String[] args) {
 			
+			
+			
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String user = "MJH96";
 			String password = "java";
@@ -23,8 +25,9 @@ package m_jh;
 			try {
 				con = DriverManager.getConnection(url, user, password); //연결
 				
-				String sql = "delete from member where mem_id='skek'"; // ? <= 넣고싶은[값]만 대신할수있음
+				String sql = "delete from member where mem_id= ?"; // ? <= 넣고싶은[값]만 대신할수있음
 				ps = con.prepareStatement(sql);
+				ps.setString(1, id);
 				int result = ps.executeUpdate(); //리턴타입 int
 				System.out.println(result+"회원가입 완료");
 				
