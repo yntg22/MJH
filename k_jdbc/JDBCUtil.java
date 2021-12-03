@@ -130,7 +130,7 @@ public class JDBCUtil {
 	////////////////////////2번째 Map<String, Object> selectOne(String sql, List<Object> param)
 	public Map<String, Object> selectOne(String sql, List<Object> param) {
 		// 돌려줄 해쉬맵 생성
-		HashMap<String,Object> map = new HashMap<>();
+		HashMap<String,Object> map = null; 
 
 		try {
 			con = DriverManager.getConnection(url, user, password); // db연결
@@ -147,12 +147,12 @@ public class JDBCUtil {
 			// ▼메타데이터의 컬럼갯수를 저장
 			int coulumnCount = metaData.getColumnCount();
 
-			while (rs.next()) { // 쿼리결과저장한 rs 객체를 next라는 메소드로 한줄씩 불러온다는 느낌?
+			if(rs.next()) { // 쿼리결과저장한 rs 객체를 next라는 메소드로 한줄씩 불러온다는 느낌?
+				map = new HashMap<>(); //왜 또 새로 만듬? 
 				for (int i = 1; i <= coulumnCount; i++) { // 위에서구한 rs의 컬럼수만큼 돌릴거다 컬럼은 1부터 시작 가로로
 					map.put(metaData.getColumnName(i), rs.getObject(i));
 					// rs객체의 메타데이터에서 i번째 컬럼이름과, i번째 컬럼의값?을 오브잭트로꺼내서 위에서 만든
 					// map해쉬맵에 string타입 컬럼이름(해쉬맵에서는 key역활이고), object값(데이터값) 넣음
-
 				}
 			}
 		} catch (SQLException e) {
@@ -195,8 +195,8 @@ public class JDBCUtil {
 			ResultSetMetaData metaData = rs.getMetaData(); // 메타데이터는 그냥 데이터의 속성? 같은거네
 			// ▼메타데이터의 컬럼갯수를 저장
 			int coulumnCount = metaData.getColumnCount();
-
-			while (rs.next()) { // 쿼리결과저장한 rs 객체를 next라는 메소드로 한줄씩 불러온다는 느낌?
+			//if를 넣는이유 , 결과가 여러줄이면?
+			if (rs.next()) { // 쿼리결과저장한 rs 객체를 next라는 메소드로 한줄씩 불러온다는 느낌?
 				for (int i = 1; i <= coulumnCount; i++) { // 위에서구한 rs의 컬럼수만큼 돌릴거다 컬럼은 1부터 시작 가로로
 					map.put(metaData.getColumnName(i), rs.getObject(i));
 					// rs객체의 메타데이터에서 i번째 컬럼이름과, i번째 컬럼의값?을 오브잭트로꺼내서 위에서 만든
