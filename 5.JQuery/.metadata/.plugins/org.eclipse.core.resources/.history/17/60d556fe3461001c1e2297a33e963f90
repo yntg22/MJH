@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>제목연습</title>
+		
+	<style>
+	pre{
+	font-size:1.8em;
+	}
+	</style>
+		</head>
+		
+<body>
+<pre>
+< : &amp;lt; 
+> : &amp;gt; 
+공백 : &amp;nbsp;
+		
+ &lt;br> :줄바꿈
+ &lt;pre>&lt;/pre> :입력모양대로 출력&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 모양대로&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출력
+ &lt;hr> : 수평선 또는 구분선
+ &lt;p>&lt;/p> :짧은 단락
+ &lt;span></span> : 여러문장 또는 단락내에서 일부분의 문자를 구분
+ &lt;h1>&lt;/h1>~&lt;h6>&lt;/h6> : 큰글씨 , Header글로 나타내는 글자
+ </pre>
+ </body>
+
+		 </html>

@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>JSP : Java Server Page</h1>
+서버프로그램 : 서버내에서 실행되는 프로그램이다 <br>
+html을 기본으로 하여 java언어를 사용할 수 있다 <br>
+
+&lt;%  %> 기호 사이에 자바코드를 기술한다 <br>
+&lt;%= %> 자바 변수를 출력 할때 사용 <br>
+
+</body>
+</html>

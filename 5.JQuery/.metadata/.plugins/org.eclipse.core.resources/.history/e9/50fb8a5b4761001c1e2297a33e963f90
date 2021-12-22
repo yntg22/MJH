@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	form{
+		border : 1px solid orange;
+		margin : 20px 100px 30px 50px; 
+		padding : 10px;
+		width : 50%;
+	}
+	
+	label{
+		display : inline-block;
+		width : 60px;
+		height : 30px;
+
+	}
+
+	pre{
+		border : 5px dotted pink;
+		font-size: 1.5em;
+		background : #f1ffad;
+		width : 30%;
+		padding : 20px;
+	}	
+</style>
+</head>
+<body>
+<pre>
+서버로 전송
+&lt;form> 태그를 이용
+전송방식 :
+get
+post
+&lt;form action="input.jsp" method="get">
+&lt;form action="input.jsp" method="post">
+
+&lt;input type="submit" value="전송">
+submit 버튼을 클릭하면 action의 input.jsp가 실행된다.
+</pre>
+
+	<form action="input.jsp" method="get">
+		<label>아이디</label> <input type="text" name="id"> <br>
+		<label>이 름</label> <input type="text" name="name"> <br>
+		<label>번 호</label> <input type="password" name="num"> <br>
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">
+		<input type="image" src="../images/셔틀콕.jpg">
+	</form>
+	
+	<form action="input.jsp" method="post">
+		<label>아이디</label> <input type="text" name="id"> <br>
+		<label>이름</label> <input type="text" name="name"> <br>
+		<label>번호</label> <input type="password" name="num"> <br>
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">
+		<input type="image" src="../images/셔틀콕.jpg">
+	</form>
+
+</body>
+</html>

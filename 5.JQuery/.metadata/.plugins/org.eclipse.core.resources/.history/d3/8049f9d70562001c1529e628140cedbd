@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="fr"> <!-- 사용예 document.fr.price.value -->
+	물품가격 : <input type="text" name="price"><br>
+	수량 : <input type="text" name="qty"><br>
+	<button type="button" onclick="calc()">
+	계산하기
+	</button>
+	</form>
+</body>
+</html>

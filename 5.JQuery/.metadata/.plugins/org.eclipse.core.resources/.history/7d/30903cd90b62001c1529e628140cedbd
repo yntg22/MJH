@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="" action="" method="">
+	이름<input type="text" name="name"><br>
+	자기소개<br>
+		<textarea rows="5" cols="60"></textarea>
+	</form>
+</body>
+</html>

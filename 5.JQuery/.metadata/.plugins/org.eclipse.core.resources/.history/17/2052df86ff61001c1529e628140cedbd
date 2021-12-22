@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+</style>
+<script type="text/javascript"> /*뒤에 type=...은 생략가능*/
+
+</script>
+</head>
+<body>
+	<form>
+	물품가격 : <input type="text" name="price"><br>
+	수량 : <input type="text" name="qty"><br>
+	<input type="button" value="계산하기" onclick="calc()">
+	</form>
+	
+	<form name="fr">
+	물품가격 : <input type="text" name="price"><br>
+	수량 : <input type="text" name="qty"><br>
+	<input type="button" value="계산하기" onclick="calc()">
+	</form>
+	
+	<p>결과출력</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- input은 type이 생략되면 text이다 -->
+	<form action="button.jsp" method="post" name="fr"> <!-- 사용예 document.fr.price.value -->
+	물품가격 : <input type="text" name="price"><br>
+	수량 : <input type="text" name="qty"><br>
+	
+	<button type="button" onclick="calc()">계산하기</button>
+	<!-- value="계산하기" 대신 열고닫는사이에 넣는다 -->
+	
+	<button>전송</button>
+	<button type="submit">전송</button>
+	</form>
+</body>
+</html>

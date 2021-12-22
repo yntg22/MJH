@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>리스트</title>
+      
+   <style>
+         img{
+            width : 30px;
+            height : 30px;
+         }
+         /*
+         body *{
+            border : 1px solid pink;
+         }
+         */
+         
+         div{
+            overflow : auto;
+            border : 1px solid red;
+            width : 20%;
+            height : 150px;
+            float : left; // 블럭요소의 배치를 inline처럼
+         }
+         pre{
+            font-siz : 1.5em;
+            background : #fad9aa;
+         }
+         #ddl{
+            height : 220px;
+         }
+      </style>      
+   </head>
+      
+   <body>
+<pre>
+   번호없는 리스트 : &lt;ul>
+   &lt;ul>&lt;li>&lt;li>&lt;/ul>
+   &lt;li>&lt;/li>사이에 문자, 이미지, 링크, 다른 리스트가 올 수 있다.
+   
+   &lt;div>
+      큰 단락
+      여러가지의 태그들을 분리하여 묶어준다.
+      블럭요소
+</pre>
+   <div>
+      <ul>
+         <li>에스프레소</li>
+         <li>아메리카노</li>
+         <li>카페라떼</li>
+         <li>카푸치노</li>
+      </ul>
+   </div>
+   <div>   
+      <ul>
+         <li><img src = "../images/에스프레소.jpg"   alt = "에스프레소.jpg" ></li>
+         <li><img src = "../images/아메리카노.jpg"   alt = "아메리카노.jpg" ></li>
+         <li><img src = "../images/카페라떼.jpg"   alt = "카페라떼.jpg" ></li>
+         <li><img src = "../images/카푸치노.jpg"   alt = "카푸치노.jpg" ></li>
+      </ul>
+   </div>   
+   <div>
+      <ul>
+         <li><a href = "http://www.daum.net" target = "_blank">다음</a></li>
+         <li><a href = "http://www.naver.com" target = "_blank">네이버</a></li>
+         <li><a href = "http://www.google.com" target = "_blank">구글</a></li>
+         <li><a href = "http://www.nate.com" target = "_blank">네이트</a></li>
+      </ul>
+   </div>   
+   <div>   
+      <ul>
+         <li><a href = "../http://www.daum.net" target = "_blank">
+            <img src = "../images/DAUM.JFIF"   alt = "DAUM.jpg" >
+            </a>
+         </li>
+         <li><a href = "../http://www.naver.com" target = "_blank">
+            <img src = "../images/NAVER.JFIF"   alt = "NAVER.jpg" >
+            </a>
+         </li>
+         <li><a href = "../http://www.google.com" target = "_blank">
+            <img src = "../images/GOOGLE.JFIF"   alt = "GOOGLE.jpg" >
+            </a>
+         </li>
+         <li><a href = "../http://www.nate.com" target = "_blank">
+            <img src = "../images/NATE.jpg"   alt = "NATE.jpg" >
+            </a>
+         </li>
+      </ul>
+   </div>   
+   <div>   
+      <a href = "http://www.daum.net">다음</a>
+      <a href = "http://www.naver.com">네이버</a>
+      <a href = "http://www.google.com">구글</a>
+      <a href = "http://www.nate.com">네이트</a>
+   </div>
+   <div id = "ddl">
+      <ul>
+         <li> 꽃이름
+            <ol>
+               <li>개나리</li>
+               <li>진달래</li>
+               <li>수선화</li>
+            </ol>
+         </li>
+         
+         <li>맛있는거
+            <ol>
+               <li>떡볶이</li>
+               <li>불고기</li>
+               <li>치킨과맥주</li>
+            </ol>
+         </li>
+         
+         <li>좋아하는것
+            <ul>
+               <li>게임하기</li>
+               <li>잠자기</li>
+               <li>공부하기</li>
+            </ul>   
+         
+         </li>
+      </ul>
+   </div>   
+   </body>

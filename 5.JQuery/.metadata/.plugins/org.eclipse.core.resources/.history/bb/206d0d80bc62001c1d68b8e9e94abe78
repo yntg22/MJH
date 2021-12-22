@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<fieldset>
+	<form>
+	이름<input type="text" name="name"><br>
+	아이디<input type="text" name="id"><br>
+	</form>
+	</fieldset>
+</body>
+</html>

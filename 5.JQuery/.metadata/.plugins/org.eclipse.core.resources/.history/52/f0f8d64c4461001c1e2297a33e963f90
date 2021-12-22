@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	form{
+		border : 1px solid orange;
+		margin : 20px 100px 30px 50px; 
+		padding : 10px;
+		width : 50%;
+	}
+	
+	span{
+		display : inline-block;
+		width : 60px;
+		height : 40px;
+
+	}
+	
+</style>
+</head>
+<body>
+
+	<form action="input.jsp" method="get">
+		<span>아이디</span> <input type="text" name="id"> <br>
+		<span>이 름</span> <input type="text" name="name"> <br>
+		<span>번 호</span> <input type="text" name="num"> <br>
+		<input type="submit" value="전송">
+	</form>
+	
+	<form action="input.jsp" method="post">
+		<span>아이디</span> <input type="text" name="id"> <br>
+		<span>이름</span> <input type="text" name="name"> <br>
+		<span>번호</span> <input type="text" name="num"> <br>
+		<input type="submit" value="전송">
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+from{
+	border : 1px solid gold;
+	margin : 20px auto;
+	padding : 30px;
+	
+}
+</style>
+</head>
+<body>
+	<form action="select.jsp" method="post">
+		<select name="cars">
+			<option value="모닝">모닝</option>
+			<option value="K5">K5</option>
+			<option value="스파크" selected>스파크</option>
+			<option value="카니발">카니발</option>
+			<option value="K7">K7</option>
+		</select>
+	
+	</form>
+	
+	<form action="select.jsp" method="post">
+		<select name="cars2">
+			<option value="모닝">모닝</option>
+			<option value="K5">K5</option>
+			<option value="스파크">스파크</option>
+			<option value="카니발">카니발</option>
+			<option value="K7">K7</option>
+		</select>
+	
+	</form>
+</body>
+</html>

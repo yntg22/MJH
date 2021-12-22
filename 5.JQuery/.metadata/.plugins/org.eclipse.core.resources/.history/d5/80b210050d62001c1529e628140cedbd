@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+table{
+	border : 1px solid blue;
+	margin : 20px auto; /*위아래 20px 양옆은 자동*/
+}
+td{
+	width : 200px;
+	height : 200px;
+	padding : 10px;
+}
+#cont{s
+	width : 500px;
+}
+
+	
+</style>
+</head>
+<body>
+
+<%
+	String name = request.getParameter("name");
+	String content = request.getParameter("area");
+	
+%>
+
+<table border="1">
+	<tr>
+		<td><%=name%></td>
+		<td id="cont"><%=content%></td>
+	</tr>
+</table>
+</body>
+</html>

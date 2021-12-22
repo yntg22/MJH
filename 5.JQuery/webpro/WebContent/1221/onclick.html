@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+p{
+	border : 2px solid olive;
+	margin : 20px;
+	padding : 30px;
+}
+
+
+</style>
+<script src="../js/outscript.js">
+</script>
+</head>
+<body>
+	<form>
+	물품가격 : <input type="text" name="price"><br>
+	수량 : <input type="text" name="qty"><br>
+	<input type="button" value="계산하기" onclick="calc()">
+	</form>
+	
+	<pre>
+	계산하기를 클릭하면 script에 정의된 calc()함수를 호출한다.
+	입력된 값을 script에서 사용한다.
+	document.fr.price.value
+	document.fr.qty.value
+	
+	계산후 결과를 id=result에 출력한다.
+	document.getElementById('result').innerHTML = 결과값
+	document.getElementById('result').textContent = 결과값
+	<!-- document == 객체 -->
+	
+	</pre>
+	<form name="fr"> <!-- 사용예 document.fr.price.value -->
+	물품가격 : <input type="text" name="price"><br>
+	수량 : <input type="text" name="qty"><br>
+	<input type="button" value="계산하기" onclick="calc()">
+	</form>
+	
+	<p id="result">결과출력</p> <!--id = 하나의 요소 element-->
+	
+</body>
+</html>
