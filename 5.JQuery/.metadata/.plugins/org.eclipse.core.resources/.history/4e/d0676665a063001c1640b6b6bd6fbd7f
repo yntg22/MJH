@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+textarea {
+	direction: rtl;
+}
+</style>
+</head>
+<body>
+<textarea rows="10" cols="50"></textarea>
+</body>
+</html>

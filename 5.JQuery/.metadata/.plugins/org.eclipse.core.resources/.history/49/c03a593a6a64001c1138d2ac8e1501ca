@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	function proc(){
+		//form을 검색
+// 		document.ff.style.display = "block";
+// 		document.querySelector('form').style.display = "block";
+
+// 		document.getElementsByTagName('form')[0].style.display = "block";
+		
+// 		a=document.getElementsByTagName('form');
+// 		a[0].style.display = "block";
+	}
+</script>
+<link rel="stylesheet" href="../css/public.css">
+
+<style>
+form{
+	width : 50%;
+	height : auto;
+	border : 1px solid blue;
+	padding : 20px;
+	display: none;
+}
+label{
+	display : inline-block;
+	width : 80px;
+	heigth : 30px;
+}
+
+
+</style>
+</head>
+<body>
+<pre>
+스크립트에서 html요소로 접근,검색하는 방법
+name을 이용 : document.name이름
+class를 이용 : 
+	arr[] = document.getElementsByClassName('ttr');
+	리턴결과 타입은 배열 = arr[0] arr[1]
+	
+	a = document.querySelector('.ttr')
+	b[] = document.querySelectorAll('.ttr')
+	a는 단수이고 b는 배열변수이다
+<!-- '' "" 뭘쓰든 상관없음 -->
+id를 이용
+	document.getElementById('tab1')
+	document.querySelector('#tab1')
+<!-- [] 배열기호 안쓴다 스크립트에서는 그냥 내가 구별하려고 일단 씀 -->
+tag이름을 이용
+	arr[] = document.getElementsByTagName('form')
+	a = document.querySelector('form')
+	b = document.querySelectorAll('div')
+
+</pre>
+	<input type="button" value="확인" onclick="proc()">
+	<br>
+	<form name="ff" action="display.jsp" method="post">
+	<label>이름</label>
+	<input type="text" name="name"><br>
+
+	<label>아이디</label>
+	<input type="text" name="id"><br>
+
+	<label>전화번호</label>
+	<input type="text" name="tel"><br>
+	<input type="submit" value="전송"><br>
+
+
+
+	
+	</form>
+</body>
+</html>

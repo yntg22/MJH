@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Vujahday+Script&display=swap" rel="stylesheet">
+<style>
+div#d1{
+font-family: 'Merriweather', serif;
+font-family: 'Vujahday Script', cursive;
+}
+#d2{
+	font : italic bold 20px/30px;
+}
+
+
+
+</style>
+</head>
+<body>
+<div id="d1">
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~
+</div>
+
+<div id="d2">
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~<br>
+Happy New Year~~~
+Happy New Year~~~
+</div>
+</body>
+</html>

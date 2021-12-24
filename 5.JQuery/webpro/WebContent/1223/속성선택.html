@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+.pp{
+	color : red;
+	font-size : 2.0em;
+}
+
+/* div.pp{
+	
+} 아래랑똑같은 ]*/
+div[class=pp]{
+	background : yellow;
+}
+
+p[title=happy]{
+	font-weight : bold;
+}
+
+p[title]{
+	font-style : italic;
+}
+
+</style>
+</head>
+<body>
+<pre>
+속성선택
+.pp : 클래스가 pp인 모든 요소를 선택
+div[class=pp] : div의 클래스가 pp인거
+p[title=happy] : p태그중 title가 happy인거
+p[title] : p태그중 title속성을 가지고 있는 요소를 선택
+
+</pre>
+	<p class="pp">무궁화 꽃이 피었습니다</p>
+	<p title="merry" id="idp">Merry Christmas~~~</p>
+	<p class="pp">Happy New Year~~</p>
+	<p title="happy">Happy New Year~~</p>
+	
+	<div class="pp">건강하고 행복하세요. 건행~~</div>
+	
+</body>
+</html>

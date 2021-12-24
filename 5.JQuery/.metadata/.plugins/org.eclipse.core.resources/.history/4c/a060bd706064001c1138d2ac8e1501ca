@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table{
+	border : 2px solid blue;	
+	/*비어있는 cell 숨기기*/
+	empty-cells: hide;
+	/*위에서 20px 띄우고 가운데로*/
+	margin : 20px auto;
+}
+tr{
+	padding : 20px;
+	
+}
+
+td{
+	text-align : center;
+	width : 150px;
+	height : 50px;
+}
+
+caption{
+	margin : 20px; 
+	font-size: 2.0em;
+	/*캡션 아래로 내리기*/
+	caption-side : bottom;
+	color : pink;
+}
+
+#tab2 th{
+	height : 50px;
+	font-size: 1.5em;
+}
+
+</style>
+
+</head>
+<body>
+<table id="tab1" border="1">
+	<caption>~~건행~~</caption>
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	<td>3</td>
+	</tr>
+	
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	<td>3</td>
+	</tr>
+	
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	</tr>
+	
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	</tr>
+	</table>
+	
+	<table id="tab2" border="1">
+	<caption>~~건행~~</caption>
+	<tr>
+		<th>이름</th>
+		<th>이메일</th>
+		<th>전화번호</th>
+	</tr>
+	
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	<td>3</td>
+	</tr>
+	
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	<td>3</td>
+	</tr>
+	
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	</tr>
+	
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+pre{
+	border : 1px solid blue;
+	background-color : #ada5ff
+}
+</style>
+</head>
+<body>
+<pre>
+외부스타일 : 별도의 파일로 저장. 확장자는 css
+ html문서에 적용시키기 위해서 
+ &lt;link rel="stylesheet" href="파일이름" type="text/css">
+ 
+내부스타일 :
+ html문서내부에 &lt;style> &lt;/style>안에서 기술 
+
+인라인스타일 :
+ 태그를 안에서 &lt;span style="color:blue;">
+ 
+</pre>
+</body>
+</html>

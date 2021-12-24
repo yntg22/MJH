@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	function change(){
+		alert(document.ff.color.value)
+	}
+
+</script>
+</head>
+<body>
+<form name="ff">
+	<!-- 정규표현식이 정확하지 않다 (email,tel) = 별로의미없음 그냥 text로 받아도 됨 -->
+	<label>이메일</label>
+	<input type="email" name="email"><br>
+	
+	<label>전화번호</label>
+	<input type="tel" name="tel"><br>
+	
+	<label>우편번호</label>
+	<input type="number" name="zip" min="0" max="100" step="10" value="5"><br>
+	
+	<!-- 1월부터 12월까지? 선택하라 뭐 -->
+	<label>년도</label>
+	<input type="range" name="year" min="1900" max="2020" step="10"><br>
+	
+	<label>생일</label>
+	<input type="date" name="bir"><br>
+	
+	<label>url주소</label>
+	<input type="url" name="url"><br>
+	
+	<label>색상</label>
+	<input type="color" name="color"><br>
+
+	<!-- onclick="함수이름()" 스크립트 -->
+	<input type="button" value="확인" onclick="change()">
+	
+	
+	<!-- 전송하는법 4가지 -->
+	<input type="submit" value="전송">
+	<button>전송</button>
+	<button type="submit">전송</button>
+	<input type="image" src="../images/check.png" alt="전송">
+	
+	
+	
+</form>
+
+
+
+</body>
+</html>

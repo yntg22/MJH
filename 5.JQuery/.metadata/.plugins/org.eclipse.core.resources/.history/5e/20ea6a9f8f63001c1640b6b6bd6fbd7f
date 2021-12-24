@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+div{
+	border : 1px dotted blue;
+	width : 200px;
+	height : 150px;
+	margin : 2px;
+	padding : 5px;
+	
+	float : left;
+	overflow : auto;
+}
+
+#u1{
+
+}
+ul[id=u2]{
+	list-style-type: circle;
+}
+ul#u3{
+	list-style-type: square;
+}
+#u4{
+	list-style-image: url(../images/check.png);
+}
+	
+
+
+</style>
+
+</head>
+<body>
+
+<div>
+<h4>list-style-type : disk</h4>
+	<ul id="u1">
+		<li>개나리</li>
+		<li>진달래</li>
+		<li>무궁화</li>
+		<li>라일락</li>
+	</ul>
+</div>
+
+<div>
+<h4>list-style-type : circle</h4>
+	<ul id="u2">
+		<li>개나리</li>
+		<li>진달래</li>
+		<li>무궁화</li>
+		<li>라일락</li>
+	</ul>
+</div>
+
+<div>
+<h4>list-style-type : square</h4>
+	<ul id="u3">
+		<li>개나리</li>
+		<li>진달래</li>
+		<li>무궁화</li>
+		<li>라일락</li>
+	</ul>
+</div>
+
+<div>
+<h4>list-style-image: url(../images/check.png)</h4>
+	<ul id="u4">
+		<li>개나리</li>
+		<li>진달래</li>
+		<li>무궁화</li>
+		<li>라일락</li>
+	</ul>
+</div>
+
+<div>
+	<ul id="u5">
+		<li>개나리</li>
+		<li>진달래</li>
+		<li>무궁화</li>
+		<li>라일락</li>
+	</ul>
+</div>
+
+<div>
+	<ul id="u6">
+		<li>개나리</li>
+		<li>진달래</li>
+		<li>무궁화</li>
+		<li>라일락</li>
+	</ul>
+</div>
+</body>
+</html>

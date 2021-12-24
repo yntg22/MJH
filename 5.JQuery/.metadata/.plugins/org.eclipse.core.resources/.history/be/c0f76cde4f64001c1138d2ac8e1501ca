@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+div{
+	border : solid;
+	margin : 5px;
+	padding : 10px;
+	height: 50px;
+}
+
+#d1{
+	border : 3px solid blue;
+}
+
+#d2{
+	border : 10px inset red;
+}
+#d3{
+	border : 10px outset pink;
+}
+#d4{
+	border : 5px dashed darkgray;
+}
+#d5{
+	border-width : 20px;
+	border-style: groove;
+	border-color: green;
+}
+#d6{
+	border-style: bridge;
+}
+</style>
+</head>
+<body>
+	<div id="d1"></div>
+	<div id="d2"></div>
+	<div id="d3"></div>
+	<div id="d4"></div>
+	<div id="d5"></div>
+	<div id="d6"></div>
+	<div id="d7"></div>
+	<div id="d8"></div>
+	
+</body>
+</html>

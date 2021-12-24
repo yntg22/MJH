@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	function proc(){
+		
+		document.ff.
+	}
+</script>
+
+<style>
+form{
+	width : 50%;
+	height : auto;
+	border : 1px solid blue;
+	padding : 20px;
+	display: none;
+}
+label{
+	display : inline-block;
+	width : 80px;
+	heigth : 30px;
+}
+
+
+</style>
+</head>
+<body>
+<pre>
+스크립트에서 html요소로 접근,검색하는 방법
+name을 이용 : document.name이름
+class를 이용 : 
+	arr[] = document.getElementsByClassName('ttr');
+	리턴결과 타입은 배열 = arr[0] arr[1]
+	
+	document.querySelector('.ttr')
+id를 이용
+tag이름을 이용
+</pre>
+	<input type="button" value="확인" onclick="proc()">
+	<br>
+	<form name="ff" action="display.jsp" method="post">
+	<label>이름</label>
+	<input type="text" name="name"><br>
+
+	<label>아이디</label>
+	<input type="text" name="id"><br>
+
+	<label>전화번호</label>
+	<input type="text" name="tel"><br>
+	<input type="submit" value="전송"><br>
+
+
+
+	
+	</form>
+</body>
+</html>

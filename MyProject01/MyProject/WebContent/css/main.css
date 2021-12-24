@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:wght@300&family=Vujahday+Script&display=swap" rel="stylesheet">
+
+body {
+  width: 100%;
+  height : 100%;
+}
+
+#header {
+  background: white;
+  width : 100%;
+  height: 50px;
+
+}
+
+#sidebar {
+  background: #99ff99;
+  width: 100%;
+  height: 50%;
+
+}
+
+#maincontent {
+  background: #9999ff;
+ float : right;
+  width:50%;
+  height: 50%;
+}
+
+
+
+div #mainname{
+	text-align: center;
+	position: absolute;
+	margin: 10px 0 0 43%;
+	font-size : 30px;
+	font-family: 'Anton', sans-serif;
+	font-family: 'Merriweather', serif;
+	font-family: 'Vujahday Script', cursive;
+}
+
+#hoon{
+	
+	width : 50%;
+	height : 100%;
+}
+
+

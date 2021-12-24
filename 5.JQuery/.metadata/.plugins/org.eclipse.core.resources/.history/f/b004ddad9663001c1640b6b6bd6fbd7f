@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body{
+	background-image : url(../images/cloud03.jpg);
+	background-repeat: repeat; 
+	/* repeat-y;세로로 */ /* repeat-x; 가로로 */ /* no-repeat; 하나만*/
+	background-size: 200px 200px;
+	background-position: top center;
+}
+
+</style>
+</head>
+<body>
+	
+	
+
+</body>
+</html>

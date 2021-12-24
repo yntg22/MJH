@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="post">
+	<!-- autofocus ==> 화면에 이름적는곳에 커서가 깜빡임  -->
+	<label for="name">이름</label>
+	<input autofocus="autofocus" id="name" size="15" type="text" name="name"><br>
+		
+	<!-- readonly ==> 읽기만 가능함 value값이 있다? -->
+	<label for="id">아이디</label>
+	<input readonly="readonly" value="korea" id="id" size="15" type="text" name="id"><br>
+	
+	<!-- required -->	
+	<label for="pass">비밀번호</label>
+	<input type="password" id="pass" name="pass" required="required">
+	
+	<input type="submit" value="전송">	
+	</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>이메일 전송화면</h1>
+
+<label>이름</label>
+<input type="text" name="name">
+<label>이메일</label>
+<input type="text" name="name">
+<label>내용</label>
+<input type="text" name="name">
+</body>
+</html>

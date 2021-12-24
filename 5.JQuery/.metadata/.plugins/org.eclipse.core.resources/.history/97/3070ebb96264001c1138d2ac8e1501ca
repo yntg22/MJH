@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="확인">
+	<br>
+	<form>
+	<label>이름</label>
+	<input type="text" name="name"><br>
+	</form>
+</body>
+</html>

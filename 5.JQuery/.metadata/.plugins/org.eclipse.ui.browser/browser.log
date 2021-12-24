@@ -5,3 +5,17 @@
 12월 22, 2021 09:05:00.91 [1944:6660:1222/090500.914:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
 12월 22, 2021 09:05:00.91 [1944:6660:1222/090500.914:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
 12월 22, 2021 09:05:00.93 [1944:6496:1222/090500.931:ERROR:device_event_log_impl.cc(214)] [09:05:00.931] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+12월 22, 2021 10:00:25.26 [1944:6496:1222/100025.260:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+12월 22, 2021 11:03:02.77 [1944:6496:1222/110302.770:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 22, 2021 12:30:05.45 [1944:6496:1222/123005.456:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+12월 24, 2021 09:08:27.63 NEW SESSION
+12월 24, 2021 09:08:27.63 [6624:10996:1224/090827.637:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 24, 2021 09:08:27.65 [6624:10996:1224/090827.637:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 24, 2021 09:08:27.65 [6624:10996:1224/090827.637:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 24, 2021 09:08:27.65 [6624:10996:1224/090827.638:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 24, 2021 09:08:27.65 [6624:2112:1224/090827.654:ERROR:device_event_log_impl.cc(214)] [09:08:27.654] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+12월 24, 2021 11:34:50.86 [6624:2112:1224/113450.866:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+12월 24, 2021 11:37:05.55 [6624:2112:1224/113705.552:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+12월 24, 2021 12:16:14.62 [6624:2112:1224/121614.629:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 24, 2021 12:36:21.92 [6624:2112:1224/123621.922:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost

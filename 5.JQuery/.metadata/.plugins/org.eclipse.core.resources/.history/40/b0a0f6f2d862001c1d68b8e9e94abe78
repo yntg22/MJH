@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="../css/public.css">
+
+<style>
+	a:link{
+		color : pink;
+		text-decoration: none;
+	}
+	
+	a:visited{
+		color : blue;
+	}
+	
+	a:hover{
+		color : red;
+		background : yellow;
+		text-decoration : underline overline;
+	}
+	
+	a:active{
+		color : green;
+		font-size : 1.5em;
+	}
+</style>
+</head>
+<body>
+<pre>
+의사코드
+상태
+ :link		: 처음 링크(a)
+ :visited	: 방문한 후
+ :hover		: 커서를 올려놓았을 때
+ :active	: 클릭할 때(누를 때)
+ 
+구조	: 몇 번째 자식을 선택할 때
+ :nth-child(index)	
+ :nth-child(2n) <!-- 짝수 -->
+ :nth-child(2n+1) <!-- 홀수 -->
+ 
+ 
+ 
+ 
+</pre>
+<a href="http://www.ddit.or.kr" target="_blank">대덕인재개발원</a>
+
+<a href="http://www.w3shools.com" target="_blank">w3schools</a>
+
+<a href="http://www.nate.com" target="_blank">네이트</a>
+
+<a href="http://www.daum.net" target="_blank">다음</a>
+
+<a href="http://www.naver.com" target="_blank">네이버</a>
+
+</body>
+</html>

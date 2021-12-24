@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+textarea {
+	direction: rtl;
+}
+div{
+	border : 1px solid blue;
+	height : auto;
+}
+#d1{
+	line-height : 40px;
+	letter-spacing: 10px;
+}
+
+#d1 span{
+	/* text-decoration: underline; */
+	text-transform: capitalize; /* lowercase; */ /* uppercase; */
+	font-size: 3.0em;
+	text-shadow: 20px 30px 2px red;
+}
+</style>
+</head>
+<body>
+<textarea rows="10" cols="50"></textarea>
+
+<br><br>
+<div id="d1">
+<span>Happy New Year~~~</span>
+성탄 대축일의 뿌리가 어디까지인지를 정확히 밝히기는 어렵다. 하지만 그 틀이 갖춰진 것은 분명 3세기이다. 동방 교회에서는 1월 6일 주님 공현 대축일이, 서방 교회에서는 12월 25일 성탄 대축일이 성립된 것이 대략 비슷한 시기였다. 다만 축일 성립 과정의 바탕이 되는 종교/문화적 맥락이 달라 축일의 의미에 부여되는 강조점도 달랐다. 그러나 궁극적인 의미는 동일했다.
+
+즉, 새로운 빛이요 역사상 진정한 태양인 예수 그리스도의 탄생을 축하하는 것이다. 두 축일이 틀을 잡는 과정에서의 복잡다단한 세부 사항들을 이 책에 모두 담을 수는 없다. 다만 두 축일을 이해하는 데 도움이 될 만한 것을 간략히 짚어 보고자 한다. 먼저 그리스도의 탄생일을 결정할 때 출발점은 놀랍게도 3월 25일이다.
+</div>
+</body>
+</html>
