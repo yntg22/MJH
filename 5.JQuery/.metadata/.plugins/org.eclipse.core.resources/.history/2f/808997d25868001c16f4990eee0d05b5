@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+// function proc1(){   }
+// var proc 1 = function(){ }
+//람다 함수 - es6
+var proc1 = (/* 매개변수(없으면 생략)*/) =>{
+	var fruits = ["사과","바나나","복숭아","참외","수박"];
+	
+// 	document.querySelector('#result1').innerHTML = fruits;
+	
+	/* str ="";
+	for(i=0;i<fruits.length; i++){
+		str += fruits[i] + "&nbsp;&nbsp;&nbsp;"
+	}
+	
+	document.querySelector('#result1').innerHTML = str;
+	 */
+}
+
+var proc2 = () => {
+	var fruits = ["자두","포도","복숭아","메론","파인애플"];
+	print(fruits, 'result2')
+}
+
+var print =(fr,res)=>{
+	str ="";
+	for(i=0;i<fruits.length; i++){
+		str += fr[i] + "&nbsp;&nbsp;&nbsp;"
+	}
+	
+	document.querySelector(res).innerHTML = str;
+}
+</script>
+</head>
+<body>
+<pre>
+배열만들기
+1. 리터럴에 의한 생성
+	var su=[1,2,3,4,5,6,7,"팔"]
+	var fruits=["사과","배","오렌지",45.789,100]
+	
+2. 생성자의 파라미터에 의한 생성
+	var fruits = new Array("사과","배","오렌지",45.789,100)
+	
+3. 파라미터가 없는 생성자에 의한 생성 
+	var fruits = new Array();
+	fruits[0] = "바나나";
+	fruits[1] = "사과";
+	fruits[2] = "원숭이";
+	fruits[3] = "침팬치";
+	
+</pre>
+<div class="box">
+		var fruits = ["사과","바나나","복숭아","참외","수박"]<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+		var fruits = ["자두","포도","복숭아","메론","파인애플"]<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<div id="result2"></div>
+</div>
+</body>
+</html>

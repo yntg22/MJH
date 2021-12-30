@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style>
+	h3{
+		color: blue;
+	}
+</style>
+
+<script>
+	function add(){
+		//html요소 검색
+		xvalue = document.getElementById('x').value;
+		yvalue = document.getElementById('y').value;
+		
+		xvalue = parseInt(xvalue);
+		yvalue = parseInt(yvalue);
+		
+		res = xvalue + yvalue;
+		
+		document.getElementById('sum').value = res;
+		
+	}
+</script>
+
+</head>
+<body>
+<div class="box">
+	<h3>입력</h3>
+	<label>X</label>
+	<input id="x" value="0"><br>
+	
+	<label>Y</label>
+	<input id="y" value="0"><br>
+	
+	<h3>결과</h3>
+	<input type="text" id="sum" value="0">
+	
+	<br>
+	<input type="button" value="확인" onclick="add()">
+</div>
+</body>
+</html>

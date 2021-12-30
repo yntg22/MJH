@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function calc(op){
+	//입력값 가져오기
+	xvalue = parseInt(document.getElementById('x').value);
+	yvalue = parseInt(document.getElementById('y').value);
+	
+	//op비교하기
+	switch(op){
+	case '+':
+		res = fadd();
+		break;
+	case '-':
+		res = fsub();
+		break;
+	case '*':
+		res = fmulti();
+		break;
+	case '/':
+		res = fdiv();
+		break;
+	}	
+}
+
+function fadd(){
+	return xvalue + yvalue;
+}
+function fmulti(){
+	return xvalue * yvalue;
+}
+function fsub(){
+	return xvalue - yvalue;
+}
+function fdiv(){
+	return xvalue / yvalue;
+}
+
+
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>input에 입력 span에 출력</h3>
+	입력 - value<br>
+	출력 - innerHTML/ textContent<br>
+	
+	첫번째 값 <input type="text" id="x">
+	두번째 값 <input type="text" id="y"><br>
+	<input type="button" value="더하기" onclick="calc('+')">
+	<input type="button" value="빼기" onclick="calc('-')">
+	<input type="button" value="곱하기" onclick="calc('*')">
+	<input type="button" value="나누기" onclick="calc('/')">
+	<br>
+	<div>
+	<p>첫번째 값 :<span id="sp1"></span> </p>
+    <p>두번째 값 :<span id="sp2"></span> </p>
+    <p>결과 :<span id="sp3"></span> </p>	 
+    </div> 
+    
+</div>
+</body>
+</html>

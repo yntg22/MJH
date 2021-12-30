@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+</head>
+<body>
+<div class="box">
+ - 두사람의 가위바위보를 입력 - prompt를 이용<br>
+ - 결과를 출력 id=result요소에<br>
+ <br>
+ <input type="button" value="확인" onclick="proc()">
+ <br><br>
+ <div id="result">
+ 
+ </div>
+</div>
+
+</body>
+</html>

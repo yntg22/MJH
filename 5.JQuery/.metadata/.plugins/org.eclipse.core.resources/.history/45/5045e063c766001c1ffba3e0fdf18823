@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var now = new Date();
+		document.write(now);
+		/*var쓰면 지역 안쓰면 전역????*/
+		var a = now.toLocaleString();
+		document.write(a)
+	</script>
+</body>
+</html>

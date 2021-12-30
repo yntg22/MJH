@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+</head>
+<body>
+<div class="box">
+	<h3>input에 입력 span에 출력</h3>
+	입력 - value<br>
+	출력 - innerHTML/ textContent<br>
+	
+	첫번째 값 <input type="text" id="x">
+	두번째 값 <input type="text" id="y"><br>
+	<input type="button" value="더하기">
+	<input type="button" value="빼기">
+	<input type="button" value="곱하기">
+	<input type="button" value="나누기">
+	<br>
+	<div>
+	<p>첫번째 값 :<span id="sp1"></span> </p>
+    <p>두번째 값 :<span id="sp2"></span> </p>
+    <p>결과 :<span id="sp3"></span> </p>	 
+    </div> 
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+div{
+	heigth : 250px;
+	margin : 2px;
+	padding : 5px;
+	border : 1px solid blue;
+}
+#header{
+	width : 95%;
+	height: 300px;
+}
+#nav{
+	width : 30%;
+	float : left;
+	height: 500px;
+}
+#content{
+	width : 60%
+	float : rigth;
+	height : 500px;
+}
+hr{
+claer : both;
+}
+
+</style>
+</head>
+<body>
+<div id="header"></div>
+<div id="nav"></div>
+<div id="content"></div>
+<hr>
+<div id="footer"></div>
+
+</body>
+</html>

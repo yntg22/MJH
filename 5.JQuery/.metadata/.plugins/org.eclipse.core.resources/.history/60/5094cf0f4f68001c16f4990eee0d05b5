@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 1부터 10까지의 합을 구하는 프로그램을 작성하시오. -->
+<link rel="stylesheet" href="../css/public.css">
+<script>
+var proc1 = function(){
+		hap = 0;
+		for(i=1; i<=10; i++){
+			hap += i;
+		}
+		document.querySelector('#result1').innerHTML = hap;
+}
+
+var proc2 = function(){
+	hap = 0;
+	
+	for(i=1; i<=200; i++){
+		if(i % 2 != 0){
+			continue;
+		}
+		hap+= i;
+	}
+	/* for(i=2; i<=200; i++){
+		if(i%2==0){
+			hap+= i;
+		}
+	} */
+	document.querySelector('#result2').innerHTML = hap;
+}
+/* var,let 쓰면 지역변수 안쓰면 전역변수 */
+var proc3 = function(){
+	hap = 0;
+	str = "";
+	while(true){
+		//입력
+		su = parseInt(prompt("수를 입력하세요.", "0이면 종료"));
+		
+		if(su == 0){
+			break;
+		}
+		str += su+"&nbsp;&nbsp;";
+		hap += su;
+	}
+	
+	//출력내용 구성
+	code = "입력한 값 : " + str + "<br>";
+	code += "합 : " + hap;
+	document.querySelector('#result3').innerHTML = code;
+	
+}
+
+</script>
+
+</head>
+<body>
+<div class="box">
+	<h3>1~10까지 합</h3>
+	<input type="button" value="확인" onclick="proc1()"><br>
+	<br><div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>1부터 200까지의 짝수의 합</h3>
+	-continue를 사용
+	<input type="button" value="확인" onclick="proc2()"><br>
+	<br><div id="result2"></div>
+</div>
+
+<div class="box">
+	<h3>입력한 값의 합</h3>
+	사용자가 입력한 값을 계속 더하고,<br>
+	사용자가 0을 입력하면 그때까지 누적된 값을 출력하는<br>
+	프로그램을 작성하시오.<br>
+	<input type="button" value="확인" onclick="proc3()"><br>
+	<br><div id="result3"></div>
+</div>
+
+<div class="box">
+	<h3>1~10까지 합</h3>
+	<input type="button" value="확인" onclick="proc4()"><br>
+	<br><div id="result4"></div>
+</div>
+
+<div class="box">
+	<h3>1~10까지 합</h3>
+	<input type="button" value="확인" onclick="proc5()"><br>
+	<br><div id="result5"></div>
+</div>
+</body>
+</html>

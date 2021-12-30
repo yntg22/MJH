@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="box">
+	<h3>요소 찾기</h3>
+	- indexOf(item, start) : 맨 처음 만나는 item의 위치를 리턴한다.
+	- lastIndexOf(item, start) :  맨 마지막에 만나는 item의 위치를 리턴한다.
+	- 
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<tr>
+<td><a href="http://naver.com"><img src="../work/images2/신발1.jpg" width="150px"></a>
+	<br><p>에어 맥스 97 트리플 화이트</p></td>
+<td><a href="http://naver.com"><img src="../work/images2/신발2.jpg" width="150px"></a>
+	<br><p>에어 맥스 97 트리플 화이트</p></td>
+<td><a href="http://naver.com"><img src="../work/images2/신발1.jpg" width="150px"></a>
+	<br><p>에어 맥스 97 트리플 화이트</p></td>
+</tr>
+
+
+</table>
+</body>
+</html>

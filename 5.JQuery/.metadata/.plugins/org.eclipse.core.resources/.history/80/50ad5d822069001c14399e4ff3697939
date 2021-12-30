@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function proc1(){
+	rect = new Rect(5,7);
+	//출력
+	print(out);
+}
+
+function print(out){
+	//출력내용 구성
+// 	res = "가로 : " + rect.width + "<br>";
+	res = `가로 : ${rect.width} <br>`;
+	res += `세로 : ${rect.height} <br>`;
+	res += `면적 : ${rect.getArea()} <br>`;
+	res += `둘레 : ${rect.getCircum()} <br>`;
+	
+	//출력
+	document.getElementById(out).innerHTML = res;
+}
+
+function Rect(width,height){
+	this.width = width;
+	this.height = height;
+	
+	this.getArea = function(){
+		return this.width * this.height;
+	}
+	this.getCircum = function(){
+		return (this.width + this.height) * 2;
+	}
+}
+</script>
+
+</head>
+<body>
+<div class="box">
+	<h3>생성자 함수로 객체 생성</h3>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

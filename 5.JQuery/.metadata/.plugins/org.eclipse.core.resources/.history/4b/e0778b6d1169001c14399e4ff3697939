@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+function greeting(name,position){
+	alert(name + " " + position + "님을 환영합니다");
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>onclick="greeting('홍길동', '부장')"</h3>
+	<h3>onclick="greeting('개나리', '과장')"</h3>
+	<h3>onclick="greeting('진달리', '대리')"</h3>
+	<h3>onclick="greeting('무궁화', '사원')"</h3>
+	하나의 함수를 매개변수값을 변경하여 여러번 호출 할 수 있다.<br><br>
+	
+	<button onclick="greeting('홍길동', '부장')">눌러보세요!</button>
+	<button onclick="greeting('개나리', '과장')">눌러보세요!</button>
+	<button onclick="greeting('진달리', '대리')">눌러보세요!</button>
+	<button onclick="greeting('무궁화', '사원')">눌러보세요!</button>
+	</div>
+	
+	<div class="box">
+	<h3>onclick="greeting('홍길동', '부장')"</h3>
+	- 여러번 호출하지 못하고 한번만 호출하여 실행하고 종료하는 무명함수를 정의한다.<br>
+	(function (name,position){<br>
+	alert(str);<br>
+	})("홍길동","부장");<br>
+	<br>
+	<button onclick="greeting('홍길동', '부장')">눌러보세요!</button>
+	</div>
+</body>
+</html>

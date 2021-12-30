@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body{
+	 box-sizing:border-box;
+}
+header,nav,aside,section,footer{
+	 box-sizing:border-box;
+	border : 1px solid red;
+	margin : 5px;
+	padding : 1px;
+	
+}
+header{
+	width : 99%;
+	height : 130px;
+}
+nav{
+	width : 99%;
+	height : 50px;
+	
+	
+}
+
+#left{
+	padding : 10px;
+	float : left;
+	width: 150px;
+	height: 550px;
+}
+#right{
+	float : right;
+	width : 300px;
+	height: 550px;
+}
+
+section{
+	float : left;
+	width : 860px;
+	height : 550px;
+}
+footer{
+	width : 99%;
+	height : 100px;
+}
+br{
+	clear : both;
+}
+
+#navul{
+	position : absolute;
+	float : left;
+	margin-top : 8px;
+	margin-left: 15px;
+	border: 3px solid blue;
+}
+#navli{
+	width : 150px;
+	text-align : center;
+	list-style-type: none;
+	float : left;
+	border: 3px solid red;
+	margin-left : 20px;
+	
+}
+
+li{
+	list-style-type: circle; /* 리스트 옆에 점 바꾸기 */
+}
+
+a{
+	text-decoration-line: none; /* 링크밑줄없애기 */
+	
+}
+
+#mens{
+	width : 99%;
+	height : 99%;
+	align-content: center;
+	text-align: center;
+}

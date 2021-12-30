@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+//객체 정의
+var circle = { }
+
+var rect = {
+		width : 23,
+		height : 12,
+		
+		getArea : function(){
+			area = this.width * this.height;
+			return area;		
+		},
+		getCircum : function(){
+			circum = (this.width + this.height) * 2;
+			return circum;
+		}
+}
+
+function proc1(){
+	
+	print('result1');
+}
+
+function print(out){
+	//출력내용 구성
+// 	res = "가로 : " + rect.width + "<br>";
+	res = `가로 : ${rect.width} <br>`;
+	res += `세로 : ${rect.height} <br>`;
+	res += `면적 : ${rect.getArea()} <br>`;
+	res += `둘레 : ${rect.getCircum()} <br>`;
+	
+	//출력
+	document.getElementById(out).innerHTML = res;
+}
+
+function proc2(){
+	//입력
+	w = parseInt(prompt("가로 입력")); 
+	h = parseInt(prompt("세로 입력"));
+	
+	rect.width = w;
+	rect.height = h;
+	
+ 	print('result2');
+}
+
+
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>rect객체</h3>
+	속성 : 가로, 세로
+	메소드 : 면적구하기, 둘레구하기<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+	<input type="button" value="확인변경" onclick="proc2()">
+	<div id="result2"></div>
+</div>
+
+<div class="box">
+	<h3>circle객체</h3>
+	객체 정의시에 속성(rad)과 메소드(면적구하기, 둘레구하기)를 선언 하지 않아도<br>
+	동적으로 추가 하여 사용할 수 있다.<br>
+	var circle = { } <br>
+	
+	<input type="button" value="확인" onclick="proc3()">
+	<div id="result3"></div>
+	
+</div>
+</body>
+</html>

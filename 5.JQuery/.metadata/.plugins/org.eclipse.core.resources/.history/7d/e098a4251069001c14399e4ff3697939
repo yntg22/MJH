@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function greeting(name,position){
+	alert(name + " " + position + "님을 환영합니다");
+}
+</script>
+</head>
+<body>
+	<h3>onclick="greeting('홍길동', '부장')"</h3>
+	<h3>onclick="greeting('개나리', '과장')"</h3>
+	<h3>onclick="greeting('진달리', '대리')"</h3>
+	<h3>onclick="greeting('무궁화', '사원')"</h3>
+	<button onclick="greeting('홍길동', '부장')">눌러보세요!</button>
+	<button onclick="greeting('개나리', '과장')">눌러보세요!</button>
+	<button onclick="greeting('진달리', '대리')">눌러보세요!</button>
+	<button onclick="greeting('무궁화', '사원')">눌러보세요!</button>
+	
+</body>
+</html>

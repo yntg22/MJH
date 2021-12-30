@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	버튼을 클릭하면 prompt를 이용하여 데이터 입력 후 <br>
+	alert를 이용하여 출력<br>
+	<input type = "button" value = "확인" onclick ="proc()">
+
+<br>
+<br>
+	버튼을 클릭하면 prompt를 이용하여 2개의 데이터 입력 후 <br>
+	덧셈결과를 div요소에 출력<br>
+	<input type = "button" value = "확인" onclick ="add()">
+	<br><br>
+	<div></div>
+	
+<script>
+function add(){
+	//입력
+	let in1 = parseInt(prompt("첫번째 수 입력"));
+	let in2 = parseInt(prompt("두번째 수 입력"));
+	
+	//계산
+	var res = in1 + in2;
+	
+	//div 요소검색
+	//out = document.getElementsByTagName('div')[0];
+	out = document.querySelector('div')
+	
+	//출력내용구성
+	str = "천번째 수 : " + in1 + "<br>";
+	str += "두번째 수 : " + in2 + "<br>";
+	str += "덧셈결과 : " + res + "<br>";
+	
+	out.innerHTML = str;s
+	
+}
+function proc(){
+	
+	
+	var input = prompt("나이를 입력하세요", "1~100");
+	
+	alert(input);
+}
+</script>
+</body>
+</html>

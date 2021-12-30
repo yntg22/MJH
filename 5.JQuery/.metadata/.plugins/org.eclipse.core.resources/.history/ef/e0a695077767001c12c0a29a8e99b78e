@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+        div{
+                border : 1px solid blue;
+                width : 50%;
+                height : 150px;
+        }
+</style>
+
+<script>
+        today = new Date();
+                
+        function proc(){
+                
+                document.write(todaye + "<br>");
+                
+                a = today.toLocaleString();
+                b = today.toLocaleDateString();
+                c = todqy.toLocaleTimeString();
+                
+                document.write(a + "<br>");
+                document.write(b + "<br>");
+                document.write(c + "<br>");
+        }
+        
+        function proc2(){        
+                a = today.toLocaleString();
+                b = today.toLocaleDateString();
+                c = today.toLocaleTimeString();
+                        
+                //html id = result인 요소를 검색
+                //res = document.getElementById('result');
+                res = document.querySelector('#result');
+                
+                //검색된 요소에 출력 - innerHTML / textContent
+                res.innerHTML = today + "<br>" 
+                                                + a + "<br>" 
+                                                + b + "<br>" 
+                                                + c + "<br>";
+        }
+</script>
+
+</head>
+<body>
+        <h4>버튼 클릭시 document를 이용하여 오늘날짜를 출력</h4>
+        - 결과는 이미 body의 요소들로 생성된 document가 덮어진다<br>
+        - script에서 실행된 결과만 보여진다<br>
+        <input type="button" value="확인" onclick="proc()">
+        <br><br>
+        
+        <h4>버튼 클릭시 div요소에 오늘 날짜를 출력</h4>
+        <input type="button" value="확인" onclick="proc2()">
+        <div id="result"></div>
+        <br><br>
+        
+</body>
+</html>

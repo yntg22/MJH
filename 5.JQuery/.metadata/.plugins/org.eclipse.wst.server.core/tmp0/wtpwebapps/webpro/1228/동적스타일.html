@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+	p{
+		color : green;
+	}
+	
+</style>
+<script>
+	var ptag;
+
+	window.onload=function(){
+	//p태그를 검색
+	ptag = document.getElementsByTagName('p');
+}
+	function change(){
+		
+		cr = parseInt(Math.random() *256);
+		cg = parseInt(Math.random() *256);
+		cb = parseInt(Math.random() *256);
+	
+		//ptag[0].style.color = 
+			//'rgb(' + cr + ',' + cg + ',' + cb + ')';
+		
+		ptag[0].style.color = `rgb(${cr}, ${cg}, ${cb})`;
+		
+	}
+	function backcolor(){
+		
+		cr = parseInt(Math.random() *256);
+		cg = parseInt(Math.random() *256);
+		cb = parseInt(Math.random() *256);
+		
+		
+		ptag[0].style.background = `rgb(${cr}, ${cg}, ${cb})`;
+	}
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>템플릿 리터럴</h3>
+		- 백틱기호를 이용하여 문자열을 구성 한다 <br>
+		- 일반 문자열과 변수값을 "" + 기호 없이 구성한다 <br>
+		- 변수값은 ${ }로 표현한다
+		<p onclick = "backcolor()"> 무궁화 꽃이 피었습니다</p>
+		<input type="button" value = "확인" onclick="change()">
+	</div>
+
+
+</body>
+</html>

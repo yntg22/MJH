@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+//객체 정의
+var rect = {
+		width : 23,
+		height : 12,
+		
+		getArea : function(){
+			area = this.width * this.height;
+			return area;		
+		},
+		getCircum : function(){
+			circum = (this.width + this.height) * 2;
+			return circum;
+		}
+}
+
+function proc(){
+	//rect객체를 출력
+	
+	//출력내용 구성
+// 	res = "가로 : " + rect.width + "<br>";
+	res = `가로 : ${rect.width} <br>`;
+	res += `세로 : ${rect.height} <br>`;
+	res += `면적 : ${rect.getArea()} <br>`;
+	res += `둘레 : ${rect.getCircum()} <br>`;
+	
+	//출력
+	document.getElementById('result1').innerHTML = res;
+}
+
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>rect객체</h3>
+	속성 : 가로, 세로
+	메소드 : 면적구하기, 둘레구하기<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

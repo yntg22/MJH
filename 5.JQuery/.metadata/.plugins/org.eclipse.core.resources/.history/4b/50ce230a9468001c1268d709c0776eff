@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<tr>
+<td><img src="../work/images2/신발1.jpg" width="150px"></td>
+<td><img src="../work/images2/신발2.jpg" width="150px"></td>
+<td><img src="../work/images2/신발1.jpg" width="150px"></td>
+</tr>
+
+
+</table>
+</body>
+</html>

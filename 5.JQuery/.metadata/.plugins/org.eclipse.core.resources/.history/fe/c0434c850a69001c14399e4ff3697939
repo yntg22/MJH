@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="../1229/가위바위보.html" target="#if1">가위바위보</a>
+<a href="../1229/구구단테이블.html">구구단테이블</a>
+<a href="../1229/배열만들기.html">배열만들기</a>
+<br><br>
+<iframe src="함수만들기">
+
+</iframe>
+</body>
+</html>

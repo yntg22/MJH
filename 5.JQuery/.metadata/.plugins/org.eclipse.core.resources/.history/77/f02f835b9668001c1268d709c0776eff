@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css2/main.css">
+</head>
+<body>
+<header>
+
+</header>
+
+<nav>
+<ul id="navul">
+	 <li id="navli"><a href="http://naver.com">Home</a></li>
+	 <li id="navli"><a href="http://naver.com">Women</a></li>
+	 <li id="navli"><a href="http://naver.com">Kids</a></li>
+</ul>
+</nav>
+
+<aside id = "left">
+<a onfocus="blur()" onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)">
+카테고리
+</a><div style="DISPLAY: block">
+<ul>
+	 <li><a href="http://naver.com">Men</a></li>
+	 <li><a href="http://naver.com">New</a></li>
+	 <li><a href="http://naver.com">Men</a></li>
+	 <li><a href="http://naver.com">Woman</a></li>
+	 <li><a href="http://naver.com">Kids</a></li>
+</ul>
+</div>
+<br>
+<a onfocus="blur()" onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)">
+브랜드
+</a><div style="DISPLAY: block">
+<ul>
+	 <li><a href="http://naver.com">Adidas</a></li>
+	 <li><a href="http://naver.com">Nike</a></li>
+	 <li><a href="http://naver.com">Converse</a></li>
+	 <li><a href="http://naver.com">Fila</a></li>
+	 <li><a href="http://naver.com">Jordan</a></li>
+	 <li><a href="http://naver.com">Puma</a></li>
+	 <li><a href="http://naver.com">Lacoste</a></li>
+	 <li><a href="http://naver.com">McKenzie</a></li>
+</ul>
+</div>
+
+</aside>
+
+<section>
+<iframe id="mens" src="../work/mens1.html">  </iframe>
+
+</section>
+
+<aside id="right">
+<p>Shopping Cart</p>
+<p>현재 쇼핑카트에 물품이 없습니다.</p>
+<a href="">장바구니 보기</a>
+<br>
+<h3>Login</h3>
+<p>아이디</p>
+<input type="text" name="name"><br>
+<p>패스워드</p>
+<input type="text" name="name"><br>
+<input type="button" value="로그인">
+<input type="button" value="초기화">
+</aside>
+<br>
+<footer></footer>
+</body>
+</html>

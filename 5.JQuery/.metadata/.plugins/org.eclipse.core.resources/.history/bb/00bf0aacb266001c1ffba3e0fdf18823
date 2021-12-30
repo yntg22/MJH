@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+div{
+	width : 150px;
+	height : 150px;
+	margin : 20px;
+	position: absolute;
+}
+
+#d1{
+	background: yellow;
+}
+
+#d2{
+	background: blue;
+}
+
+#d3{
+	background: red;
+}
+</style>
+
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+</body>
+</html>

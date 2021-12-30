@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/spongebob.png" href="/favicon.ico?1" />
+<link rel="stylesheet" href="../css/public.css">
+<script>
+   function score() {
+      //입력 
+   var   sc = parseInt(prompt("점수를 입력하세요"));
+   var   rank = " ";
+      
+      //비교
+      switch (parseInt(sc/10)) {
+      case 10 :
+         rank = "A+"
+         break;
+      case 9 :
+         rank = "A"
+         break;
+      case 8:
+         rank = "B"
+         break;
+      case 7:
+         rank = "C"
+         break;
+      case 6:
+         rank = "D"
+         break;
+      default:
+         rank = "F"
+      }
+      
+      //출력 내용구성
+      var   str = `${sc}점 : ${rank} 입니다.`;
+      
+      //result 검색 -출력
+      document.querySelector("#result").innerHTML = str;
+   }
+</script>
+</head>
+<body>
+   <div class="box">
+      <h3>성적표</h3>
+      <input type="button" value="확인" onclick="score()"> <br>
+      <br>
+      <div id="result"></div>
+   </div>
+</body>
+</html>

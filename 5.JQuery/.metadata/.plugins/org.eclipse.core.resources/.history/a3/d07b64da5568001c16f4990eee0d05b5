@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+<pre>
+배열만들기
+1. 리터럴에 의한 생성
+	var su=[1,2,3,4,5,6,7,"팔"]
+	var fruits=["사과","배","오렌지"]
+
+2. 생성자의 파라미터에 의한 생성
+	
+	
+3. 파라미터가 없는 생성자에 의한 생성 
+</pre>
+<div class="box">
+	<input type="button" value="확인">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

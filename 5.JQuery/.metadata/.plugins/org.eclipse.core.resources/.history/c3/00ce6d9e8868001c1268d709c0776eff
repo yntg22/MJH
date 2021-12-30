@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css2/main.css">
+</head>
+<body>
+<header>
+
+</header>
+
+<nav>
+<ul id="navul">
+	 <li id="navli"><a href="http://naver.com">Home</a></li>
+	 <li id="navli"><a href="http://naver.com">New</a></li>
+	 <li id="navli"><a href="http://naver.com">Men</a></li>
+	 <li id="navli"><a href="http://naver.com">Woman</a></li>
+	 <li id="navli"><a href="http://naver.com">Kids</a></li>
+</ul>
+</nav>
+
+<aside id = "left">
+<ul id="navul">
+	 <li id="navli"><a href="http://naver.com">Home</a></li>
+	 <li id="navli"><a href="http://naver.com">New</a></li>
+	 <li id="navli"><a href="http://naver.com">Men</a></li>
+	 <li id="navli"><a href="http://naver.com">Woman</a></li>
+	 <li id="navli"><a href="http://naver.com">Kids</a></li>
+</ul>
+</aside>
+
+<section>
+</section>
+
+<aside id="right">
+</aside>
+<br>
+<footer></footer>
+</body>
+</html>
