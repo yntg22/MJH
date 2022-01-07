@@ -1,0 +1,37 @@
+package kr.or.ddit.basic;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class jackson03 {
+
+	public static void main(String[] args) {
+		Article article = new Article(1, "2020-12-12 12:12");
+
+		ObjectMapper mapper = new ObjectMapper();
+		String jsonString = null;
+		try {
+			jsonString = mapper.writeValueAsString(article);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(jsonString);
+	}
+
+}
+
+class Article{
+	public int id;
+	public String regDate;
+	
+	public Article() {
+		
+	}
+	
+	public Article(int id, String regDate) {
+		super();
+		this.id = id;
+		this.regDate = regDate;
+	}
+}

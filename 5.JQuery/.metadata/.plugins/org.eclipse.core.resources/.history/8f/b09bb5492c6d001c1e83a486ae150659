@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+proc1 = () => {
+	setTimeout(function(){
+		box1 = document.querySelector('.box1');
+		box1.style.backgroundColor = 'red';
+		
+
+	}, 1000)
+	
+}
+proc2 = () => {
+	
+	setInterval(function(){
+// 		1초마다 색 바꿔서 / 랜덤rgb
+		cr = Math.floor(Math.random()*256);
+		cg = Math.floor(Math.random()*256);
+		cb = Math.floor(Math.random()*256);
+		
+		box1 = document.querySelector('.box2');
+		box1.style.backgroundColor = 'rgb(' + cr +','+cg+','+cb+')';
+	}, 1000)
+	
+}
+
+</script>
+</head>
+<body>
+
+<div class="box box1">
+	<h3>setTimeout</h3>
+	정해진 시간이 경과후에 한번 실행 후 종료<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+
+<!-- class가 2개가 된다 -->
+<div class="box box2">
+	<h3>setInterval</h3>
+	정해진 시간이 경과할 때 마다 반복적으로 실행 <br>
+	<input type="button" value="확인" onclick="proc2()">
+	<div id="result2"></div>
+</div>
+
+</body>
+</html>

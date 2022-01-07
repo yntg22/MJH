@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<style>
+p{
+	border : 1px solid green;
+	padding : 10px;
+}
+</style>
+
+<script>
+//방법1
+$(function(){
+	//문서전체에서 p태그를 선택한다.
+	$('p').css('background', 'pink');
+
+	//선택자,	컨텍스트
+	$('p','#result1').css('color','red');
+	//부모자식관계로표현
+	$('#result1 p').css('font-size','2.0em');
+	
+	//클릭 이벤트 설정   [.class이름]
+	$('.indiv').on('click', function(){
+		//이게 안되서 jquery에서 가능
+// 		plist = document.getElementsByTagName('p');
+// 		plist[0].style.fonSize = '+=3px';
+		
+		//컨텍스트로 써야 this안에 p를 선택할수있다? this를 ''안에 넣을수 없어서 (this는 변수라서) $('this p'); <= 이렇게 안된다는 얘기
+		$('p' , this).css('font-size','+=3px')
+					 .css('background', 'yellow');
+		
+		$('p',this).css({'font-size':'+=3px','background':'yellow'});
+	})
+	
+})
+//방법2
+/* $(document).ready(function(){
+	
+})
+//방법3
+window.onload = function(){
+	
+} */
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<p>무궁화꽃이 피었습니다.</p>
+	<input type="button" value="확인" onclick="proc1()">
+	<div class="indiv" id="result1">
+		<p>무궁화 꽃이 피었습니다.</p>
+	</div>
+	
+	<div class="indiv" id="result2">
+		<p>무궁화 꽃이 피었습니다.</p>
+	</div>
+	
+</div>
+</body>
+</html>

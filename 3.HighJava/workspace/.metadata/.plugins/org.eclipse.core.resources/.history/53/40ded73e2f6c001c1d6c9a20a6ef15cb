@@ -1,0 +1,28 @@
+package kr.or.ddit.basic;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+
+public class DataIOTest {
+	public static void main(String[] args) {
+		try {
+			FileOutputStream fos = new FileOutputStream("d:/d_other/test.dat");
+			
+			// 자료형 단위로 출력할 보조스트림인 DataOutputStream객체 생성
+			DataOutputStream dos = new DataOutputStream(fos);
+			
+			dos.writeInt(200);				// 정수형으로 데이터 출력
+			dos.writeFloat(123.45f);	// 실수형(float)으로 데이터 출력
+			dos.writeBoolean(false);	// 논리형으로 데이터 출력
+			dos.writeUTF("ABCDabcd");	// 문자열 형식으로 데이터 출력
+			System.out.println("출력 완료...");
+			
+			dos.close(); //스트림 닫기
+			
+			// 00000000 00000000 00000000 11001000
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

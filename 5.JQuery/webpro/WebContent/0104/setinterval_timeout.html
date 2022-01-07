@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+proc1 = () => {
+	setTimeout(function(){
+		box1 = document.querySelector('.box1');
+		box1.style.backgroundColor = 'red';
+		
+
+	}, 1000)
+	
+}
+
+proc2 = (but) => {
+	
+	//확인버튼 = but = 안보이게 설정
+	but.style.display = 'none';
+	
+	//but지역변수를 전역변수로 대입
+	gbut = but;
+	
+	a = setInterval(function(){
+// 		1초마다 색 바꿔서 / 랜덤rgb
+	console.log(a);
+		cr = Math.floor(Math.random()*256);
+		cg = Math.floor(Math.random()*256);
+		cb = Math.floor(Math.random()*256);
+		
+		//16진수로 변환해서..
+		r16 = cr.toString(16);
+		g16 = cg.toString(16);
+		b16 = cg.toString(16);
+		
+		box2 = document.querySelector('.box2');
+// 		box1.style.backgroundColor = 'rgb(' + cr +','+cg+','+cb+')';
+		box2.style.backgroundColor = '#'+ r16 + g16 + b16;
+	}, 1000)
+	
+}
+
+proc3 = () => {
+	clearInterval(a);
+	//확인버튼 나타나게 설정
+	gbut.style.display = 'inline';
+}
+
+</script>
+</head>
+<body>
+
+<div class="box box1">
+	<h3>setTimeout</h3>
+	정해진 시간이 경과후에 한번 실행 후 종료<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+
+<!-- class가 2개가 된다 -->
+<div class="box box2">
+	<h3>setInterval</h3>
+	정해진 시간이 경과할 때 마다 반복적으로 실행 <br>
+<!-- 	button이 this(파라미터로 준)가 된다 -->
+	<input type="button" value="확인" onclick="proc2(this)">
+	<input type="button" value="취소" onclick="proc3()">
+	<div id="result2"></div>
+</div>
+
+</body>
+</html>

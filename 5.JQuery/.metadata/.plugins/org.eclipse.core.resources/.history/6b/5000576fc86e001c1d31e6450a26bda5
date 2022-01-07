@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	버튼 클릭시 p태그를 생성하여 result1에 추가<br>
+	<input type="button" value="확인">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

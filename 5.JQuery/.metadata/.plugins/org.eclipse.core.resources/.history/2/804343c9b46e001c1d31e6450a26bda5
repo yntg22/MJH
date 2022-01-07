@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+proc1 =() =>{
+   
+ /*   str = ["10000원", "2000원", "35000원", "40000000원"] //기준이되는 글자는 반드시 포함하고 있어야한다.
+   
+   reg= /.+(?=원)/
+   
+   for(i=0; i<str.length; i++){
+      bb = str[i].match(reg);
+      alert(bb);
+   }
+    */
+   	// 입력한 값을 가져오기
+   	pvalue = document.ff.pass.value.trim();
+    
+    regpass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])$/
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+   <h3>비밀번호체크</h3>
+   영소문자, 대문자, 숫자, 특수문자가 반드시 한글자 이상씩 포함<br>
+   전방탐색 (?=) 을 이용<br>
+    \w+(?=원) : 원이라는 글자를 기준으로 앞에 한번이상 나오는 문자나 숫자를 검색한다
+   <div id="result1">
+      <form name="ff">
+         이름<input type="text" name="name"><br>
+         비밀번호<input type="text" name="pass"><br>
+         <input type="button" value="확인" onclick="proc1()">
+      </form>
+   </div>
+</div>
+</body>
+</html>

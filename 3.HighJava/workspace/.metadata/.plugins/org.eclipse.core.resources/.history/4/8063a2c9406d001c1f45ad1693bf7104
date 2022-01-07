@@ -1,0 +1,23 @@
+package kr.or.ddit.basic;
+import org.json.simple.JSONObject;
+
+public class jsonTest01 {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JSONObject data = new JSONObject();
+		
+		data.put("name", "Kim");
+		
+		data.put("age", 10);
+		
+		JSONObject response = new JSONObject();
+		
+		response.put("response", data);
+		
+		String json = response.toJSONString();
+		
+		System.out.println("만들어진 json 데이터 : " + json);
+	}
+
+}

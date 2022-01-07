@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+proc1=()=>{
+   //각 요소들을 검색하여 입력한 값을 가져오기
+   
+   vname = document.ff.name.value.trim();
+   
+   //공백검증
+   if(vname.length < 1){
+	   alert("이름 입력하세요.");
+	   return false;
+   }
+   //길이검증
+   if(vname.length > 10 || vname.length < 2){
+	   alert("이름 2~10사이 입니다.")
+	   return false;
+   }
+   
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+   <div id="result1">
+      <h3>회원가입</h3>
+      <form name="ff">
+         이름: <input type='text' name="name" id='name' ><br>
+         주소: <input type='text' name="addr" id='addr' ><br>
+         생일: <input type='date' name="birthday" id='birthday' ><br>
+         아이디(6-8 문자): 
+         <input type='text' name="username" id='username' ><br>
+         이메일: <input type='email' name="email" id='email' ><br>
+         휴대폰: <input type='tel' name="phone" id='phone' ><br>
+         <input type='button' value='확인' onclick="proc1()"><br>
+      </form>
+   </div>
+</div>   
+</body>
+</html>

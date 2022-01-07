@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>winSub</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+proc1 = () => {
+	namevalue = document.querySelector('#name').value;
+	idvalue = document.querySelector('#id').value;
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>win SUB</h3>
+	입력하여 부모창으로 보내기<br>
+	opener : 자식창에서 부모창을 나타내는 속성<br>
+	이름 <input type = "text" id="name"><br>
+	아이디 <input type = "text" id="id"><br>
+	<input type="button" value="확인" onclick="proc1()">
+
+</div>
+</body>
+</html>

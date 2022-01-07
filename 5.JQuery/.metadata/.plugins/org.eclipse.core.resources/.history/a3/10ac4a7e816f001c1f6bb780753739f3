@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<style>
+span{
+	background : yellow;
+}
+</style>
+<script>
+	$(function(){
+		$('#htmlh').on('click',function(){
+			//html() => get => html() => set
+			str = "";
+			$.each($('p'), function(){
+				str += $(this).html() + "<br>";
+			})
+			
+			$('#result1').html(str);
+		})
+		
+		
+		$('#texth').on('click',function(){
+			//text() => get => html() => set
+			str = "";
+			$.each($('p'), function(){
+				str += $('p').text();
+			})
+			
+			$('#result2').html(str);
+			
+		})
+		
+		$('#htmlt').on('click',function(){
+			//html() => get => text() => set
+			
+		})
+		
+		$('#textt').on('click',function(){
+			//text() => get => text() => set
+			
+		})
+		
+		
+	})
+
+</script>
+
+</head>
+<body>
+
+<div class="box">
+	<h3>내용 변경/설정</h3>
+	#result1.html(res) : <br>
+	#result1.text(res) : <br>
+	
+	 res의 내용으로 result1을 변경  <br>
+	 res의 내용을 result1에 출력 <br>
+	 res의 내용속에 html태그가 포함되었을 경우(포함되지 않았어도 가능)는 html() 사용<br>
+	 res의 내용속에 html태그가 포함되어 있지 않을경우 text()사용
+	 <br>
+	 
+	<p>1<span>홍길동</span></p>
+    <p>2<span>개나리</span></p>
+    <p>3<span>진달래</span></p>
+    
+	<input type="button" value="html-html" id="htmlh">
+	<input type="button" value="text-html" id="texth">
+	<input type="button" value="html-text" id="htmlt">
+	<input type="button" value="text-text" id="textt">
+	<div id="result1"></div>
+	<div id="result2"></div>
+	<div id="result3"></div>
+	<div id="result4"></div>
+</div>
+
+</body>
+</html>

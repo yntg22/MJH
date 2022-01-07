@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+arr = ["사과","바나나","키위","참외","사과","바나나","딸기","바나나"];
+function proc1(){
+	//찾는값 입력
+	item = prompt("찾는 과일 입력");
+	
+	idx = arr.indexOf(item);
+	
+	res = "찾는 과일 " + item + " 는(은)";
+	if(idx < 0){
+		res += " 없습니다.<br>";
+	}else {
+		res += idx + "번째 있습니다.<br>";
+	}
+	
+	document.getElementById('result1').innerHTML = res;
+	
+}
+
+function proc2(){
+	//lastindex 뒤에서부터 찾음, 같은이름이 두개 있을때 뒤에서부터 가까운쪽 인덱스를 반환
+	item = prompt("찾는 과일 입력");
+	
+	idx = arr.lastIndexOf(item);
+	
+	res = "찾는 과일 " + item + " 는(은)";
+	if(idx < 0){
+		res += " 없습니다.<br>";
+	}else {
+		res += idx + "번째 있습니다.<br>";
+	}
+	
+	document.getElementById('result2').innerHTML = res;
+	
+}
+
+function proc3(){
+	idx = 0;
+	str = "";
+	
+	item = prompt("과일 이름 입력");
+	
+	while(true){
+		
+		idx = arr.indexOf(item, idx);
+		
+		if(idx == -1)break;
+		
+		str+=idx + " ";
+		idx++;
+	}
+	str += "번째 있습니다.";
+	document.getElementById('result3').innerHTML = str;
+}
+
+function proc99(){
+	
+	idx = 0;
+	str = "";
+	
+	item = prompt("과일 이름 입력");
+	count = 1;
+	while(true){
+		idx[] = arr.indexOf(item, idx);
+		if(idx == -1)break;
+		idx++
+		
+	}
+	document.getElementById('result99').innerHTML = idx;
+}
+
+proc4 = () => {
+	
+	str = "추가전 : " + arr + "<br>";
+	
+	arr.push("파인애플",'포도');
+	
+	str += "추가후 : " + arr + "<br>"
+	
+	document.getElementById('result4').innerHTML = str;
+}
+
+proc5 = () => {
+	
+	str = "삭제전 : " + arr + "<br>";
+	
+	arr.pop();
+	
+	str += "삭제후 : " + arr + "<br>";
+	
+	document.getElementById('result5').innerHTML = str;
+}
+
+proc6 = () => {
+	
+	str = "정렬 전 : " + arr + "<br>";
+	
+	arr.sort();
+	
+	str += "정렬 후 : " + arr + "<br>";
+	
+	document.getElementById("result6").innerHTML = str;
+	
+}
+
+proc7 = () => {
+	newarr = arr.slice(3,6);
+	
+	str = "원래 배열 : " + arr + "<br>";
+	str += "추출한 배열 : " + newarr + "<br>";
+	
+	document.getElementById('result7').innerHTML = str;
+	
+}
+
+proc8 = () => {
+	
+	str = "원래 배열 : " + arr + "<br>";
+	
+	arr.splice(3, 1, "파인애플", "두리안");
+	
+	str += "수정 splice(3, 1, \파인애플\, '두리안'); : " + arr;
+	
+	document.getElementById('result8').innerHTML = str;
+}
+
+proc9 = () => {
+	arr2 = [100,200,300,400,500];
+// 	arr2 = new Array(100,200,300,400,500);
+	
+	str = "arr : " + arr + "<br>";
+	str += "arr2 : " + arr2 + "<br>"
+	
+	newarr = arr.concat(arr2);
+	
+	str += "newarr : arr.concat(arr2)" + newarr;
+	
+	document.getElementById('result9').innerHTML = str;
+	
+}
+
+proc10 = () => {
+	arr.join();
+	
+}
+
+</script>
+
+</head>
+<body>
+<div class="box">
+	<h3>요소 찾기</h3>
+	- indexOf(item, start) : 맨 처음 만나는 item의 위치를 리턴한다.
+	- lastIndexOf(item, start) :  맨 마지막에 만나는 item의 위치를 리턴한다.
+	start 값을 지정하면, 해당위치부터 시작해서 item을 찾는다.
+	<input type="button" value="index" onclick="proc1()">
+	<input type="button" value="last" onclick="proc2()">
+	<input type="button" value="index_start" onclick="proc3()">
+	<input type="button" value="idx" onclick="proc99()">
+	
+	<div id="result1"></div>
+	<div id="result2"></div>
+	<div id="result3"></div>
+	<div id="result99"></div>
+</div>
+
+<div class="box">
+	<h3>추가/삭제</h3>
+	- push(a,b,c) : 배열의 마지막에, a,b,c를 추가한다.<br>
+	- pop(): 맨 마지막 요소를 삭제한다.<br>
+	
+	<input type="button" value="push" onclick="proc4()">
+	<input type="button" value="pop" onclick="proc5()">
+	
+	<div id="result4"></div>
+	<div id="result5"></div>
+</div>
+
+<div class="box">
+	<h3>정렬</h3>
+	- sort : 배열의 순서 <br>
+	
+	<input type="button" value="sort" onclick="proc6()">
+
+	<div id="result6"></div>
+</div>
+
+<div class="box">
+	<h3>추출 / 수정</h3>
+	- slice(start, end) : start ~ end 사이의 요소를 추출, 새로운 배열을 생성한다. <br>
+	- splice(idx, n , a,b,c) : idx번쨰에서 n개를 삭제하고 a,b,c를 삽입한다 <br>
+	  splice(5, 1, 'dddd','aaaa'); <= 5번위치에서 1개를 삭제하고 dddd,aaaa 추가<br>
+	  splice(4, 2); <= 삭제만<br>
+	  splice(3, 0, 'aaaa', 'bbbb')<br>
+	<input type="button" value="slice" onclick="proc7()">
+	<input type="button" value="splice" onclick="proc8()">
+
+	<div id="result7"></div>
+	<div id="result8"></div>
+</div>
+
+<div class="box">
+	<h3>배열 합치기 / 문자열 변환</h3>
+	- a.concat(b) : a 배열과 b배열을 하나로 합치기.<br>
+	- a.join() : a배열을 문자열로 변환<br>
+	<input type="button" value="concat" onclick="proc9()">
+	<input type="button" value="join" onclick="proc10()">
+
+	<div id="result9"></div>
+	<div id="result10"></div>
+</div>
+
+
+
+
+
+</body>
+</html>

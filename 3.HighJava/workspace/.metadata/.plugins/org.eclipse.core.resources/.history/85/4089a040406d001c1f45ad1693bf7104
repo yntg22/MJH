@@ -1,0 +1,13 @@
+package kr.or.ddit.basic;
+
+import org.json.simple.parser.ParseException;
+
+public class jsonTest02 {
+
+	public static void main(String[] args) throws ParseException
+	{
+		String json = "{\"response\":{\"name\:\"서울\",\"age\":10}}";
+
+	}
+
+}

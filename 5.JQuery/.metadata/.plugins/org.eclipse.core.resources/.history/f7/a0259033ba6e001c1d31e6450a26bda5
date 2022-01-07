@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+
+$(document).ready(function(){
+// 	document.getElementsByClassName('box');
+	$('.box').css('background-color','darkgray');
+})
+
+/* window.onload=function(){
+	// javascript 방식
+	// 	vres = document.getElementById('result1');
+	// 	vres.style.backgroundColor = 'red';
+	
+	// jquery방식
+	//두줄로 쓸수도있고
+// 	vres = $('#result1')
+// 	vres.css('background-color','hotpink');
+	
+	//한줄로 쓸수도있음
+	$('#result1').css('background-color','hotpink');
+	
+} */
+
+
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="보이기">
+	<input type="button" value="감추기">
+	<div id="result2"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+   today = new Date();
+   tomilli = new Date(1000);
+   tostr = new Date("2021.12.31");
+   to = new Date(2021, 11, 31, 11, 46);
+
+proc1 = () => {
+   str = today.toLocaleString() + "<br>" + today + "<br>";
+   str += tomilli.toLocaleString() + "<br>";
+   str += tostr.toLocaleString() + "<br>";
+   str += to. toLocaleString() + "<br>";
+   
+   document.getElementById('result1').innerHTML = str;
+}   
+
+proc2 = () => {
+	  today = new Date();
+	day = today.getDay();
+	
+	switch(day){
+	case 0:
+		res = "일요일";
+		break;
+	case 1:
+		res = "월요일";
+		break;
+	case 2:
+		res = "화요일";
+		break;
+	case 3:
+		res = "수요일";
+		break;
+	case 4:
+		res = "목요일";
+		break;
+	case 5:
+		res = "금요일에만나요";
+		break;
+	case 6:
+		res = "놀라운토요일";
+		break;
+	}
+	
+	str = today.toLocaleStirng();
+	str += res + "입니다";
+	
+	document.getElementById('result2').innerHTML = str;
+}
+	
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>date객체 생성</h3>
+	new Date() // 현재 날짜와 시간<br>
+	new Date(milliseconds) //1970/01/01 이후의 밀리초<br>
+	new Date(dateString)<br>
+	new Date(year, month, date[, hours[, minutes[, seconds[,ms]]]])<br>
+	
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>요일구하기</h3>
+	getDay() : 0(일요일) ~ 6(토요일) 을 리턴한다.<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<div id="result2"></div>
+</div>
+</body>
+</html>

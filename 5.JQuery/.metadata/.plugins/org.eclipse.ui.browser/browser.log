@@ -19,3 +19,86 @@
 12월 24, 2021 11:37:05.55 [6624:2112:1224/113705.552:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
 12월 24, 2021 12:16:14.62 [6624:2112:1224/121614.629:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
 12월 24, 2021 12:36:21.92 [6624:2112:1224/123621.922:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+12월 29, 2021 10:41:00.93 NEW SESSION
+12월 29, 2021 10:41:00.93 [12788:11580:1229/104100.922:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 29, 2021 10:41:00.93 [12788:11580:1229/104100.922:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 29, 2021 10:41:00.93 [12788:11580:1229/104100.922:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 29, 2021 10:41:00.93 [12788:11580:1229/104100.923:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 29, 2021 10:41:00.93 [12788:1596:1229/104100.934:ERROR:device_event_log_impl.cc(214)] [10:41:00.934] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+12월 29, 2021 10:41:06.26 [2848:12736:1229/104106.269:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 29, 2021 10:41:06.27 [2848:12736:1229/104106.269:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 29, 2021 10:41:06.27 [2848:12736:1229/104106.269:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 29, 2021 10:41:06.27 [2848:12736:1229/104106.269:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 29, 2021 10:41:06.27 [2848:5948:1229/104106.273:ERROR:device_event_log_impl.cc(214)] [10:41:06.273] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+12월 29, 2021 11:00:30.46 [2848:5948:1229/110030.468:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 29, 2021 11:46:57.57 [2848:5948:1229/114657.578:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+12월 29, 2021 11:47:52.16 [2848:5948:1229/114752.165:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+12월 29, 2021 12:43:41.64 [2848:12936:1229/124341.649:ERROR:database.cc(1773)] History SQLite error: code 1555 errno 0: UNIQUE constraint failed: context_annotations.visit_id sql: INSERT INTO context_annotations( visit_id,context_annotation_flags,duration_since_last_visit,page_end_reason,total_foreground_duration )VALUES(?,?,?,?,?)
+
+12월 30, 2021 09:02:57.64 NEW SESSION
+12월 30, 2021 09:02:57.64 [13980:9184:1230/090257.638:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 30, 2021 09:02:57.64 [13980:9184:1230/090257.638:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 30, 2021 09:02:57.64 [13980:9184:1230/090257.638:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 30, 2021 09:02:57.64 [13980:9184:1230/090257.639:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 30, 2021 09:02:57.65 [13980:5832:1230/090257.648:ERROR:device_event_log_impl.cc(214)] [09:02:57.648] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+12월 30, 2021 09:43:32.04 [13980:5832:1230/094332.048:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 09:43:41.43 [13980:5832:1230/094341.439:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 09:43:50.72 [13980:5832:1230/094350.723:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:15:14.95 [13980:5832:1230/101514.952:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 30, 2021 10:42:32.46 [13980:5832:1230/104232.462:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:42:33.52 [13980:5832:1230/104233.523:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:42:33.94 [13980:5832:1230/104233.941:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:43:26.82 [13980:5832:1230/104326.826:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:44:12.07 [13980:5832:1230/104412.076:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:44:13.93 [13980:5832:1230/104413.935:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:44:49.21 [13980:5832:1230/104449.215:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:44:50.10 [13980:5832:1230/104450.105:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:44:51.03 [13980:5832:1230/104451.032:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:46:01.83 [13980:5832:1230/104601.833:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:46:08.11 [13980:5832:1230/104608.117:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:46:08.53 [13980:5832:1230/104608.539:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:46:08.73 [13980:5832:1230/104608.733:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:46:08.96 [13980:5832:1230/104608.962:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:46:46.94 [13980:5832:1230/104646.946:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:46:47.47 [13980:5832:1230/104647.473:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:46:48.14 [13980:5832:1230/104648.140:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:47:11.02 [13980:5832:1230/104711.028:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:47:41.41 [13980:5832:1230/104741.411:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:47:42.22 [13980:5832:1230/104742.225:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:47:42.59 [13980:5832:1230/104742.593:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:47:42.97 [13980:5832:1230/104742.978:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 10:47:43.36 [13980:5832:1230/104743.361:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 11:04:28.40 [13980:10732:1230/110428.403:ERROR:database.cc(1773)] History SQLite error: code 1555 errno 0: UNIQUE constraint failed: context_annotations.visit_id sql: INSERT INTO context_annotations( visit_id,context_annotation_flags,duration_since_last_visit,page_end_reason,total_foreground_duration )VALUES(?,?,?,?,?)
+12월 30, 2021 11:05:41.19 [13980:5832:1230/110541.192:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 11:08:07.48 [13980:5832:1230/110807.481:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+12월 30, 2021 11:12:58.66 [13980:5832:1230/111258.665:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+12월 30, 2021 12:04:51.18 [13980:5832:1230/120451.185:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 30, 2021 14:40:01.52 [13980:12560:1230/144001.523:ERROR:database.cc(1773)] History SQLite error: code 1555 errno 0: UNIQUE constraint failed: context_annotations.visit_id sql: INSERT INTO context_annotations( visit_id,context_annotation_flags,duration_since_last_visit,page_end_reason,total_foreground_duration )VALUES(?,?,?,?,?)
+12월 30, 2021 14:40:01.84 [13980:12560:1230/144001.840:ERROR:database.cc(1773)] History SQLite error: code 1555 errno 0: UNIQUE constraint failed: context_annotations.visit_id sql: INSERT INTO context_annotations( visit_id,context_annotation_flags,duration_since_last_visit,page_end_reason,total_foreground_duration )VALUES(?,?,?,?,?)
+12월 30, 2021 14:40:02.58 [13980:5832:1230/144002.580:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 30, 2021 14:46:54.81 [13980:5832:1230/144654.815:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+1월 03, 2022 09:00:39.44 NEW SESSION
+1월 03, 2022 09:00:39.44 [2180:4976:0103/090039.433:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 03, 2022 09:00:39.45 [2180:4976:0103/090039.434:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 03, 2022 09:00:39.45 [2180:4976:0103/090039.434:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 03, 2022 09:00:39.45 [2180:4976:0103/090039.434:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 03, 2022 09:00:39.47 [2180:13156:0103/090039.442:ERROR:device_event_log_impl.cc(214)] [09:00:39.442] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+
+1월 05, 2022 16:46:19.58 NEW SESSION
+1월 05, 2022 16:46:19.58 [12924:10936:0105/164619.581:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 05, 2022 16:46:19.59 [12924:10936:0105/164619.581:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 05, 2022 16:46:19.59 [12924:10936:0105/164619.581:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 05, 2022 16:46:19.59 [12924:10936:0105/164619.582:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 05, 2022 16:46:19.59 [12924:8692:0105/164619.591:ERROR:device_event_log_impl.cc(214)] [16:46:19.591] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 05, 2022 16:54:22.93 [12924:8692:0105/165422.931:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 16:54:22.93 [12924:8692:0105/165422.931:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 16:54:22.93 [12924:8692:0105/165422.931:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 16:58:10.58 [12924:8692:0105/165810.585:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 16:58:15.08 [12924:8692:0105/165815.084:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 16:58:15.08 [12924:8692:0105/165815.084:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 16:58:19.67 [12924:8692:0105/165819.679:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 16:58:19.67 [12924:8692:0105/165819.679:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 16:58:26.05 [12924:8692:0105/165826.055:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 17:02:21.15 [12924:8692:0105/170221.154:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost

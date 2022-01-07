@@ -1,0 +1,43 @@
+package kr.or.ddit.basic;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class JdbcTest04 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		Connection conn = null;
+		Statement stmt = null;
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection(
+					"jdbc:oracle:thin:@localhost:1521:xe", "MJH96", "java");
+			
+			System.out.println("계좌 번호 정보 추가하기");
+			System.out.println();
+			System.out.print("계좌번호 >> ");
+			String bankNo = scan.next();
+		
+			System.out.print("은행이름 >> ");
+			String bankName = scan.next();
+
+			System.out.print("예금주 이름 >> ");
+			String bankUserName = scan.next();
+			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

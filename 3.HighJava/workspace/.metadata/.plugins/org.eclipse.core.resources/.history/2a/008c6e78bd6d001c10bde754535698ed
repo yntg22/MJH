@@ -1,0 +1,11 @@
+package kr.or.ddit.basic.tcp.copy;
+
+public class TcpServer02 {
+
+	public static void main(String[] args) {
+		// 서버소켓을 만들고, 클라이언트가 접속해 오면 소켓을 만들어서
+		// 메시지를 받는 쓰레드와 메시지를 보내는 쓰레드에 이 소켓을 주입시킨다
+
+	}
+
+}

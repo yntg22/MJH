@@ -1,18 +1,18 @@
 @charset "UTF-8";
-body{
-	 box-sizing:border-box;
-}
+
+
 header,nav,aside,section,footer{
 	 box-sizing:border-box;
 background-color : white;
-	margin : 5px;
-	padding : 1px;
+	
+
+	
 	
 	
 }
 header{
 	background-color : #515151;
-	width : 99%;
+	width : 100%;
 	height : 130px;
 }
 nav{
@@ -24,28 +24,31 @@ nav{
 }
 
 #left{
-	padding : 10px;
+	padding-left : 10px;
+	padding-right :10px;
 	float : left;
-	width: 150px;
-	height: 550px;
+	width: 15%px;
+	height: 700px;
 }
 #right{
 	padding : 30px;
-	float : right;
-	width : 300px;
-	height: 550px;
+	float : left;
+	width : 30%;
+	height: 700px;
 	
 }
 
 section{
 	background-color : white;
 	float : left;
-	width : 860px;
-	height : 550px;
+	width : 60%;
+	height : 700px;
 }
 footer{
-	width : 99%;
-	height : 100px;
+	width : 100%;
+	height : 100%;
+
+	background-color: #D3D3D3;
 }
 br{
 	clear : both;
@@ -56,6 +59,7 @@ br{
 	float : left;
 	margin-top : 8px;
 	margin-left: 15px;
+	
 	
 }
 #navli{

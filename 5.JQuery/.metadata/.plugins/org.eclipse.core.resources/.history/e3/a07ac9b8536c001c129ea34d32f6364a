@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+today = new Date();
+
+proc1 = () =>{
+	newtime = today.getTime() + 24 * 60 * 60 * 1000 * 500;
+	
+	newday = new Date(newtime);
+	
+// 	newday.toLocaleString();
+	
+	res = newday.toLocaleString();
+	
+	str = "오늘 : " + today.toLocaleString() + "<br>";
+	str += "500일 후 : " + res;
+	
+	document.getElementById('result1').innerHTML = str;
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

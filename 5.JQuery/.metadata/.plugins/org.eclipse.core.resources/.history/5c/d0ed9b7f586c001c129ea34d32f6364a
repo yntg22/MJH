@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+today = new Date();
+
+proc1 = () =>{
+	newtime = today.getTime() + 24 * 60 * 60 * 1000 * 100;
+	
+	newday = new Date(newtime);
+	
+	res = newday.toLocaleString();
+	
+	str = "오늘 : " + today.toLocaleString() + "<br>";
+	str += "100일 후 : " + res;
+	
+	document.getElementById('result1').innerHTML = str;
+	
+}
+
+proc2 = () =>{
+	//1. 입력선택한 값 가져오기
+	day = document.getElementById('pdata').value;
+	
+	//1-1. 1번의 value를 파라미터로 해서 Date객체 생성
+	
+	newday1 = new Date(day);
+	//2. 1번의 millisec값 구하기
+	newday2 = newday1.getTime();
+
+	//3. today의 millisec - 2번의 값
+	newday3 = today - newday2;
+	//4. 3번의 경과일 수 구하기 /1000/60/60/24
+	newday4 = newday3 / 1000 / 60 / 60 / 24;
+	//5. 4번의 값을 if로 비교 > 7
+	if(newday4 > 7){
+		res = "7일 초과";
+	}else{
+		res = "7일 이하";
+	}
+	//출력 
+	document.getElementById('result2').innerHTML = res;
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>경과일수 구하기</h3>
+	오늘에서 100일 후의 날짜 구하기<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+   <h3>경과일 수 구하기</h3>
+   선택한 날로부터 오늘까지 7일 경과했는지 여부<br>
+   7일 경과 : 반품/교환/환불 불가능<br>
+   <input type="date" id = "pdata">
+   <input type="button" value="확인" onclick="proc2()">
+   <div id="result2"></div>
+</div>
+
+</body>
+</html>

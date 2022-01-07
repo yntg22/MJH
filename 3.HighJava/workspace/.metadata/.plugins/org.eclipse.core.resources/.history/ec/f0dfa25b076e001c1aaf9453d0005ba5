@@ -1,0 +1,37 @@
+package kr.or.ddit.basic;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class jackson03 {
+
+	public static void main(String[] args) {
+		
+
+		ObjectMapper mapper = new ObjectMapper();
+		
+		Article article = new Article();
+		
+		System.out.println(article);
+	}
+	
+}
+
+class Article{
+	public int id;
+	public String regDate;
+	public String title;
+	
+	public Article(int id, String regDate, String title, String body) {
+		super();
+		this.id = id;
+		this.regDate = regDate;
+		this.title = title;
+		this.body = body;
+	}
+	public Article() {
+		
+	}
+	public String body;
+	
+
+}

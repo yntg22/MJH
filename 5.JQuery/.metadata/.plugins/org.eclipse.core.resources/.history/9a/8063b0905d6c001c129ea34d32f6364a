@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+str = "우리 나라 대한 민국 I Love Korea 우리 나라";
+
+proc1 = () => {
+	vchar = str.charAt(3);
+	vcode = str.charCodeAt(3);
+	
+	res = str + "<br>";
+	res += "str.indexOf(3) : " + vchar + "<br>";
+	res += "str.charCodeAt(3) : " + vcode +"<br>";
+	
+	document.getElementById('result1').innerHTML = res;
+}
+
+proc2 = () => {
+	//입력 
+	value = prompt("이름을 입력하세요");
+	
+	tvalue = value.trim();
+	
+	res = "입력 값의 길이 : " + value + " " + value.length + "<br>";
+	res += "trim 후의 길이 : " + tvalue + " " + tvalue.length;
+	
+	document.getElementById('result2').innerHTML = res;
+	
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div class="box">
+	<h3>인덱스를 이용한 글자찾기</h3>
+	charAt(index) : index위치의 글자를 리턴<br>
+	charCodeAt(index) : index위치의 unicode값을 리턴 <br>
+	
+	<input type="button" value="charAt" onclick="proc1()">
+
+	<div id="result1"></div>
+
+</div>
+
+<div class="box">
+	<h3>공백제거</h3>
+	trim() : 앞뒤의 공백을 제거 <br>
+	<input type="button" value="trim()" onclick="proc2()">
+	<div id="result2"></div>
+	
+	<input type="text" id="name">
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+img{
+	width : 50px;
+	height : 50px;
+}
+</style>
+<script>
+proc1 = (txt) => {
+   var node = document.createTextNode(txt);
+   
+   document.querySelector('#result1').appendChild(node);
+}
+
+proc2 = () => {
+	// ul li를 검색
+	ultag = documnet.getElementsByTagName('ul')[0]
+	
+	list = ultag.getElementsByTagName('li');
+	
+	for(i=0; i<list.length;i++){
+		vdata = list[i].firstChild.data
+		
+		imgnode = document.createElement('img');
+		imgnode.src = "../images/" + vdata +".jpg";
+		imgnode.alt = vdata;
+		
+		list[i].appendChild(imgnode);
+		
+	
+	}
+	
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+   <h3>동적 노드 생성</h3>
+  '무궁화 꽃이 피었습니다.' 라는 문자를 textNode로 생성해서 id = "result1"에 추가한다.<br>
+   <input type="button" value="확인" onclick="proc1('무궁화 꽃이 피었습니다.')">
+   <div id="result1"></div>
+</div>
+
+<div class="box">
+   <h3>동적 노드 생성</h3>
+
+   <input type="button" value="확인" onclick="proc2()">
+   <div id="result2">
+   <ul>
+   	<li>단풍</li>
+   	<li>딸기스무디</li>
+   	<li>수국</li>
+   	<li>코알라</li>
+   	<li>호랑이</li>
+   </ul>
+   </div>
+</div>
+</body>
+</html>

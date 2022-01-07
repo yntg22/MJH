@@ -1,0 +1,92 @@
+package kr.or.ddit.basic;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+/*
+	Lprod테이블에 새로운 데이터를 추가해보자.
+	
+	Lprod_Gu와 lprod_Nm은 사용자로부터 직접 입력 받아서 처리하고,
+	Lprod_Id는 현재의 Lprod_Id값 중에서 제일 큰 값보다 1크게 지정한다.
+	
+	입력 받은 Lprod_Gu가 이미 등록되어 있으면 다시 입력 받아서 처리한다.
+	
+	쿼리문3개 제일큰값보다1큰값 찾기 max씀
+	select nvl(max(lprod_id),0) from lprod;
+	select count(*) from lprod where lprod_gu ='p202';
+	
+	Statement와 PreparedStatement의 차이점
+	
+*/
+
+public class JdbcTest05 {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		Statement stmt = null;
+		
+		ResultSet rs = null;
+		PreparedStatement pstmt = null;
+
+		Scanner s = new Scanner(System.in);
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "MJH96", "java");
+			
+			String gu = "";
+			
+			while(true) {
+			System.out.println("LPROD_GU 입력 : ");
+			gu = s.next();
+			
+			String sql = "select count(*) from lprod where lprod_gu ='"+gu+"'";
+			stmt = conn.createStatement();
+			
+			rs = stmt.executeQuery(sql);
+			
+			rs.next();
+			if(rs.getInt(1)==1) {
+				System.out.println("GU 중복 다시입력");
+			}else {
+				break;
+			}
+			}
+			
+			System.out.println("LPORD_NM 입력 : ");
+			String nm = s.next();
+			
+			// select nvl(max(lprod_id),0) from lprod;
+			String sql = "select nvl(max(lprod_id),0) from lprod";
+			stmt = conn.createStatement();
+			
+			rs = stmt.executeQuery(sql);
+			int id = rs.getInt(1);
+			
+			sql = "INSERT INTO LPROD VALUES(?,?,?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, id);
+			pstmt.setString(2, gu);
+			pstmt.setString(3, nm);
+			
+			int result = pstmt.executeUpdate();
+			
+			System.out.println("반환값 : " + result);
+			
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package kr.or.ddit.basic;
+
+import java.io.IOException;
+
+public class FileIOTest04 {
+	public static void main(String[] args) {
+		// 사용자가 입력한 내용을 그대로 파일로 저장하기
+		// 콘솔로 출력한다 = 모니터에 출력한다 | 콘솔로 입력한다 = 키보드나 마우스로 입력한다
+		try {
+			System.out.print("아무거나 입력하세요 : ");
+			int c = System.in.read();
+			
+			System.out.println("입력값 : " + (char)c);
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+	}
+}

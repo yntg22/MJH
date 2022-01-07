@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인">
+	<div id="result1">
+	
+	<p>형제 선택자 에 대하여</p>
+ 	<h3> 꼬마버스 타요 가족을 소개 합니다</h3>
+	<a></a> 
+	<p> 타요타요</p>
+ 	<p> 전영로기</p>
+ 	<p> 고라니 </p>
+ 	<p> 어디가니 </p>
+	
+	
+	</div>
+</div>
+</body>
+</html>

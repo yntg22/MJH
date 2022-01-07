@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="../css/public.css">
+<script>
+var person = '{\
+    "number" : "01",\
+    "name" : "꾸생",\
+    "id" : "abcd1234"\
+}';
+
+var info = JSON.parse(person);
+var infoStr = JSON.stringify(info)
+
+console.log(info);
+console.log(infoStr);
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

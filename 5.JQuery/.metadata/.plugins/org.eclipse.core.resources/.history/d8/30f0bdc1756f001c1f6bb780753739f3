@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+
+<div class="box">
+	<h3>내용가져오기</h3>
+	html() : 태그를 포함한 모든 문장 <br>
+	text() : 태그를 포함하지 않은 모든 문장 <br>
+	<input type="button" value="html" onclick="proc1()">
+	<div id="result1">
+	<p>1<span>홍길동</span></p>
+    <p>2<span>개나리</span></p>
+    <p>3<span>진달래</span></p>
+	</div>
+</div>
+</body>
+</html>

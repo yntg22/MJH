@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+arr = ["Hello", "GoodMorning", "happy new Year",
+	"Merry Christmas", "우리의 영웅 Hero", "백두산 호랑이",
+	"별빛같은 나의 사랑아", "사랑은 늘 도망가"];
+	
+proc1 = () =>{
+	
+	
+	idx = Math.floor(Math.random() * arr.length);
+	
+	//textNode생성 - 배열 요소로
+	textnode = document.createTextNode(arr[idx]);
+	/* 
+	//br태그생성
+	brtag = document.createElement('br');
+	
+	result1.appendChild(textnode);
+	result1.appendChild(brtag); 
+	
+	*/
+	
+	
+	//p태그를 생성
+	ptag = document.createElement('p');
+	
+	//ptag에 textnode를 추가한다
+	ptag.appendChild(textnode);
+	
+	//result1을 검색 - parent
+	res = document.querySelector('#result1');
+// 	res = document.getElementById('result1');
+	
+	//result1에 ptag를 추가한다.
+	res.appendChild(ptag);
+	
+}
+
+proc2 = () =>{
+	//부모노드 = result1검색
+	pnode = document.getElementById('result1');
+	
+	//자식노드 = lastChild를 이용해서 삭제할 node를 선택
+	cnode = pnode.lastChild;
+
+
+	//부모노드.removeChild(자식노드)
+	pnode.removeChild(cnode);
+}
+
+proc3 = () => {
+	
+	idx = Math.floor(Math.random() * arr.length);
+	
+	//textNode생성 - 배열 요소로
+	textnode = document.createTextNode(arr[idx]);
+	
+	//p태그를 생성
+	ptag = document.createElement('p');
+	
+	//삭제버튼 생성
+	dbutton = document.createElement('button');
+	dbutton.type ='button';
+// 	dbutton.innerHTML "삭제";
+	dbutton.textContent = '삭제';
+	dbutton.onclick = function(){
+		parent = this.parentNode;
+		remove(parent);
+	}
+	
+	//p태그에 추가 - textnode와 삭제버튼 
+	ptag.appendChild(textnode);
+	ptag.appendChild(dbutton);
+	
+	res = document.querySelector('#result3').appendChild(ptag);
+// 	res = document.getElementById('result1');
+	
+	//result1에 ptag를 추가한다.
+
+	
+}
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>요소생성및 삭제</h3>
+	생성클릭시 랜덤으로 발생하는 문자열을 result1에 추가한다 <br>
+	삭제클릭시 뒤에서부터 문자를 삭제한다.<br>
+	<input type="button" value="생성" onclick="proc1()">
+	<input type="button" value="삭제" onclick="proc2()">
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>요소생성및 삭제</h3>
+	생성클릭시 랜덤으로 발생하는 문자열을 result1에 추가한다 <br>
+	삭제클릭시 뒤에서부터 문자를 삭제한다.<br>
+	<input type="button" value="생성/삭제" onclick="proc3()">
+	<div id="result3"></div>
+</div>
+</body>
+</html>

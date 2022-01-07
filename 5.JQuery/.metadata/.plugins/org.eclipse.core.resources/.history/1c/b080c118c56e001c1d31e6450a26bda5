@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+p{
+	border : 1px solid green;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<p>무궁화꽃이 피었습니다.</p>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1">
+		<p>무궁화 꽃이 피었습니다.</p>
+	</div>
+	
+	<div id="result2">
+		<p>무궁화 꽃이 피었습니다.</p>
+	</div>
+</div>
+</body>
+</html>

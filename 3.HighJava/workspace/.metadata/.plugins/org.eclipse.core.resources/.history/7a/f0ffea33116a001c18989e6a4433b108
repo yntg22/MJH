@@ -1,0 +1,11 @@
+package kr.or.ddit.basic;
+
+public class DialogTest {
+
+	public static void main(String[] args) {
+		// SWING의 파일 열기, 저장 창 연습
+		JFileChooser 
+
+	}
+
+}

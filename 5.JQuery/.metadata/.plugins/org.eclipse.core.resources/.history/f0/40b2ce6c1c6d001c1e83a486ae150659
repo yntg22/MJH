@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+// 	변하지 않는 것 const?
+	const rand = Math.floor(Math.random() * 100 + 1);
+	var count = 0;
+	var str = "";
+proc1 = () => {
+	// 입력한 값 가져오기
+	suvalue = document.querySelector('#su').value;
+	count ++;
+	if(suvalue > rand){
+		res = "더 작은수로 입력";
+		document.getElementById('result1').innerHTML = res;
+		
+	}else if(suvalue < rand){
+		res = "더 큰수로 입력";
+		document.getElementById('result1').innerHTML = res;
+		
+	}else { 
+		res = "정답.."
+		
+		//출력내용
+		out = "횟수 : " + count + "<br>";
+		out += "입력 한 수 : " + suvalue + "<br>";
+		out += res;
+		
+		document.getElementById('result1').innerHTML = out;
+			
+	}
+	
+	
+	
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	1 ~ 10 사이의 난수를 발생 후 사용자가 이 값을 맞추는 프로그램을 작성하시오.<br>
+	몇번만에 맞혔는지 count 한다<br>
+	<input type="text" id="su">
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

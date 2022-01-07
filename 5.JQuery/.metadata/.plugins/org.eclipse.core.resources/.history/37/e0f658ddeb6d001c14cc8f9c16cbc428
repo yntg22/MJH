@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+img{
+	width : 50px;
+	height : 50px;
+}
+</style>
+<script>
+proc1 = (txt) => {
+   var node = document.createTextNode(txt);
+   
+   document.querySelector('#result1').appendChild(node);
+}
+
+proc2 = () => {
+	// ul li를 검색
+	ultag = document.getElementsByTagName('ul')[0]
+	
+	list = ultag.getElementsByTagName('li');
+	
+	for(i=0; i<list.length;i++){
+		vdata = list[i].firstChild.data
+		
+		imgnode = document.createElement('img');
+		imgnode.src = "../images/" + vdata +".jpg";
+		imgnode.alt = vdata;
+		
+		list[i].appendChild(imgnode);
+		
+	
+	}
+	
+	
+}
+
+proc3 = (vli) => {
+	
+	vdata = vli.firstChild.data;
+	
+	imgnode = document.createElement('img');
+	imgnode.src = "../images/" + vdata + ".jpg";
+	imgnode.alt = vdata;
+	
+	vli.appendChild(imgnode);
+	
+}
+
+proc4 = () => {
+	parent = document.getElementById('result4');
+	
+	child = document.getElementById('p1');
+	
+	parent.removeChild(child);
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+   <h3>동적 노드 생성</h3>
+  '무궁화 꽃이 피었습니다.' 라는 문자를 textNode로 생성해서 id = "result1"에 추가한다.<br>
+   <input type="button" value="확인" onclick="proc1('무궁화 꽃이 피었습니다.')">
+   <div id="result1"></div>
+</div>
+
+<div class="box">
+   <h3>동적 노드 생성</h3>
+
+   <input type="button" value="확인" onclick="proc2()">
+   <div id="result2">
+   <ul>
+   	<li>단풍</li>
+   	<li>딸기스무디</li>
+   	<li>수국</li>
+   	<li>코알라</li>
+   	<li>호랑이</li>
+   </ul>
+   </div>
+</div>
+
+<div class="box">
+   <h3>동적 노드 생성</h3>
+   <div id="result3">
+   <ul>
+   	<li onclick="proc3(this)">단풍</li>
+   	<li onclick="proc3(this)">딸기스무디</li>
+   	<li onclick="proc3(this)">수국</li>
+   	<li onclick="proc3(this)">코알라</li>
+   	<li onclick="proc3(this)">호랑이</li>
+   </ul>
+   </div>
+</div>
+
+<div class="box">
+   <h3>동적 노드 삭제</h3>
+   첫번째 단락을 삭제한다.
+   <input type="button" value="확인" onclick="proc4()">
+   <div id="result4">
+   <p id="p1">첫번째 단락</p>
+   <p id="p2">두번째 단락</p>
+   </div>
+</div>
+</body>
+</html>

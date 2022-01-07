@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+str = "우리 나라 대한 민국 I Love Korea 우리 나라";
+
+proc1 = () => {
+	vchar = str.charAt(3);
+	vcode = str.charCodeAt(3);
+	
+	res = str + "<br>";
+	res += "str.indexOf(3) : " + vchar + "<br>";
+	res += "str.charCodeAt(3) : " + vcode +"<br>";
+	
+	document.getElementById('result1').innerHTML = res;
+}
+
+proc2 = () => {
+	//입력 
+	value = prompt("이름을 입력하세요");
+	
+	tvalue = value.trim();
+	
+	res = "입력 값의 길이 : " + value + " " + value.length + "<br>";
+	res += "trim 후의 길이 : " + tvalue + " " + tvalue.length;
+	
+	document.getElementById('result2').innerHTML = res;
+	
+}
+
+proc3 = () =>{
+	//입력한 값 가져오기
+	namevalue = document.getElementById('name').value;
+	
+	if(namevalue.trim().length > 0){
+		alert("입력성공");
+	}else {
+		alert("데이터를 입력하세요");
+	}
+}
+
+proc4 = () => {
+	//입력한 값을 가져오기
+	text = document.getElementById('area').value;
+	
+	console.log(text);
+	
+	text = text.replace(/\r/g, "").replace(/\n/g, "<br>");
+	
+	document.getElementById('result4').innerHTML = text;
+	
+}
+
+proc5 = () => {
+	
+	subs = str.substring(6,11);
+	slice = str.slice(6,11);
+	substr = str.substr(6,5);
+	
+	res = str + "<br>";
+	res += `str.substring(6,11); : ${subs} <br>`;
+	res += `str.slice(6,11) : ${slice} <br>`;
+	res += `str.substr(6,5) : ${substr} <br>`;
+	
+	document.getElementById('result5').innerHTML = res;
+	
+}
+
+proc6 = () => {
+	arr = str.split(" ");
+	
+	
+	documnet.getElementById('result6').innerHTML = arr;
+}
+</script>
+
+
+</head>
+<body>
+
+<div class="box">
+	<h3>인덱스를 이용한 글자찾기</h3>
+	charAt(index) : index위치의 글자를 리턴<br>
+	charCodeAt(index) : index위치의 unicode값을 리턴 <br>
+	
+	<input type="button" value="charAt" onclick="proc1()">
+
+	<div id="result1"></div>
+
+</div>
+
+<div class="box">
+	<h3>공백제거</h3>
+	trim() : 앞뒤의 공백을 제거 <br>
+	<input type="button" value="trim()" onclick="proc2()">
+	<div id="result2"></div>
+	
+	<h3>데이터 입력체크</h3>
+	<input type="text" id="name">
+	<input type="button" value="trim" onclick="proc3()">
+	
+</div>
+
+<div class="box">
+	<h3>문자열 대체</h3>
+	replace(oldstr, newstr) : oldstr 문자를 newstr문자로 변경 <br>
+	trxtarea 입력하여 result4에 출력
+	<br>
+	<textarea id="area" rows="10" cols="50"></textarea><br>
+	<input type="button" value="replace" onclick="proc4()">
+	<div id="result4"></div>
+</div>
+
+<div class="box">
+	<h3>문자열 추출</h3>
+	substring(start , end) : start ~ end-1 까지 문자를 추출 <br>
+	slice(start , end) : start ~ end-1 까지 문자를 추출<br>
+	substr(start, length) : start ~ length의 개수만큼 추출<br>
+	<br>
+	<input type="button" value="추출" onclick="proc5()">
+	<div id="result5"></div>
+</div>
+
+
+<div class="box">
+	<h3>문자열 분리</h3>
+	split(구분자, 개수) : 구분자를 기준으로 문자열을 분리한다 결과는 배열로 리턴<br>
+
+	<br>
+	<input type="button" value="분리" onclick="proc6()">
+	<div id="result6"></div>
+</div>
+</body>
+</html>

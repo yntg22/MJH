@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+img {
+   width : 100px;
+   height : 100px;
+   border-radius : 50%;
+   margin : 10px;
+}
+</style>
+<script>
+proc1 = () => {
+   //종료클릭시 선택된 이미지의 테두리를 삭제한다.
+   
+   //id = result1를 검색 = 부모노드
+   parent = document.getElementById('result1')
+   
+   setInterval(function(){
+      //첫번째 자식을 선택 - 자식노드
+      child = parent.firstChild;
+      //뒤로 이동 시킴 - 부모노드.appendChild(자식노드)
+      parent.appendChild(child);
+      
+      
+   }, 100)
+   
+   
+   
+}
+proc2 = () =>{
+   //시작버튼을 보이게 설정
+   
+   //룰렛을 멈춘다
+   
+   //랜덤으로 이미지 한개를 선택하여 테두리를 설정한다
+   
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+   <h3></h3>
+   <input type="button" value="시작" onclick="proc1()">
+   <input type="button" value="종료" onclick="proc2()">
+   <div id="result1">
+      <img src="../images/국화.jpg" alt="국화">
+      <img src="../images/국화유정.jpg" alt="국화유정">
+      <img src="../images/국화1.jpg" alt="국화1">
+      <img src="../images/국화2.jpg" alt="국화2">
+      <img src="../images/국화3.jpg" alt="국화3">
+      <img src="../images/국화4.jpg" alt="국화4">
+      <img src="../images/국화5.jpg" alt="국화5">
+   </div>
+   
+   
+</div>
+</body>
+</html>

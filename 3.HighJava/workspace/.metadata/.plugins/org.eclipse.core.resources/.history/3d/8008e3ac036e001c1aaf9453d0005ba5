@@ -1,0 +1,77 @@
+package kr.or.ddit.basic;
+
+import java.io.File;
+import java.io.IOException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+public class JackSon01{
+    public static void main(String[] args) throws InterruptedException{
+    	Student student = new Student("민","진홍","19960423","우리집","대전","01077100749");
+    	 
+    	ObjectMapper mapper = new ObjectMapper();
+    	
+    	try {
+			mapper.writeValue(new File("result.json"), student);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    }
+    
+}
+
+class Student{
+    private String firstName;
+    private String lastName;
+    private String dateOfBirth;
+    private String address;
+    private String city;
+    public Student(String firstName, String lastName, String dateOfBirth, String address, String city, String contact) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirth = dateOfBirth;
+		this.address = address;
+		this.city = city;
+		this.contact = contact;
+	}
+	private String contact;
+
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+    public String getContact() {
+        return contact;
+    }
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+}

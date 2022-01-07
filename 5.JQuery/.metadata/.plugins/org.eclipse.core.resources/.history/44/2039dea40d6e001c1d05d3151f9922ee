@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript" src="result.json">
+var mydata = JSON.parse(data);
+alert(mydata[0].name);
+alert(mydata[0].age);
+alert(mydata[1].name);
+alert(mydata[1].age);
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

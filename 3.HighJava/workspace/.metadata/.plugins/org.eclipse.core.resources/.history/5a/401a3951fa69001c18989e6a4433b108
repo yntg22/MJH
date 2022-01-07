@@ -1,0 +1,21 @@
+package kr.or.ddit.basic;
+
+import java.io.IOException;
+
+public class FileIOTest01 {
+
+	public static void main(String[] args) {
+		//FileInputStream을 이용한 파일 내용 읽기
+		
+		try {
+			//읽어올 파일정보를 인수값을 받는 FileInputStream객체 생성
+			
+			// 방법 1
+			FileInputStream fin new FileInputStream("d:/d_other/test.txt");
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

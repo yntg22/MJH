@@ -1,0 +1,18 @@
+package kr.or.ddit.basic;
+
+import java.io.IOException;
+
+public class FileIOTest01 {
+
+	public static void main(String[] args) {
+		//FileInputStream을 이용한 파일 내용 읽기
+		
+		try {
+			
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

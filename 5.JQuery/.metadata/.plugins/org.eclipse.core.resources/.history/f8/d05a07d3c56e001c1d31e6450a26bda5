@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<style>
+p{
+	border : 1px solid green;
+	padding : 10px;
+}
+</style>
+
+<script>
+//방법1
+$(function(){
+	//문서전체에서 p태그를 선택한다.
+	$('p').css('background', 'pink');
+
+	//선택자,	컨텍스트
+	$('p','#result1').css('color','red');
+	$('#result1 p').css('font-size','2.0em')	
+})
+//방법2
+/* $(document).ready(function(){
+	
+})
+//방법3
+window.onload = function(){
+	
+} */
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<p>무궁화꽃이 피었습니다.</p>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1">
+		<p>무궁화 꽃이 피었습니다.</p>
+	</div>
+	
+	<div id="result2">
+		<p>무궁화 꽃이 피었습니다.</p>
+	</div>
+</div>
+</body>
+</html>

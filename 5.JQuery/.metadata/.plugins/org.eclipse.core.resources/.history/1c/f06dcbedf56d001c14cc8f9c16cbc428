@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1">
+	<img src="../images/스포츠3.jpg" alt="스포츠">
+	<img src="../images/아메리카노.jpg" alt="아메리카노">
+	<img src="../images/옷2.jpg" alt="옷2">
+	<img src="../images/카페라떼.jpg" alt="카페라떼">
+	<img src="../images/컴퓨터2.jpg" alt="컴퓨터2">
+	<img src="../images/코알라.jpg" alt="코알라">
+	
+	</div>
+	
+</div>
+</body>
+</html>

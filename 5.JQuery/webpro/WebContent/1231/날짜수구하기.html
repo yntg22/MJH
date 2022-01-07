@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+today = new Date(); //오늘날
+
+proc1 = () => {
+	myday = new Date("1996.04.23");
+// 	myday = new Date(1998, 03-1, 14); //2로나와서 -1해줌
+	
+	//각 날짜의 getTime()으로 millisecond값을 얻는다.
+	
+	tomilli = today.getTime();
+	mymilli = myday.getTime();
+	console.log(tomilli,mymilli); //f12 콘솔창에 띄우려고 한거임
+	
+	milli = tomilli - mymilli;
+	console.log(milli);
+	
+	year = milli / 1000 / 60 / 60 /24 /365;
+	console.log(year);
+	
+	year = parseInt(year);
+	str = "태어난 날 : " + myday.toLocaleString() + "<br>";
+	str += year + "년이 경과 했습니다.";
+	
+	document.getElementById('result1').innerHTML = str;
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>날짜수 구하기</h3>
+	
+	 getTime() : millisecond의 값을 얻는다.<br>
+	 millisecond 에서 실제 초를 구하려면 1000으로 나눈다<br>
+	
+	태어난 날로부터 현재까지 지난 년수를 구한다 
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

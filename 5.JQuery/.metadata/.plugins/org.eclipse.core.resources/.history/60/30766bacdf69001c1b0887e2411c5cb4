@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+proc1 = () => {
+// 	arr = [];
+	arr = new Array();
+	
+	while(true){
+		//입력
+		input = prompt("이름을 입력");
+		
+		//break 하기위한 비교
+		if(input == "" || input == null)break; 
+		
+		//배열에 저장
+		arr.push(input);
+	}
+	
+	//출력
+	document.getElementById('result1').innerHTML = arr;
+}
+
+proc2 = () => {
+	
+	arr = new Array();
+}
+</script>
+
+</head>
+<body>
+
+<div class="box">
+	<h3>문제 1</h3>
+	사람 이름을 계속 입력 받아 배열에 저장하고 그 저장된 이름을 출력하는 프로그램을 작성하시오.<br>
+	(단, 입력은 prompt 명령을 이용하고, 입력의 마지막은 공백문자를 입력하거나<br>
+	 "취소" 버튼을 눌렀을 때로 한다. "취소" 버튼은 null 이 입력될 때이다.)<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>문제 2</h3>
+	서로 중복되지 않은 정수 5개를 입력 받아 출력하는 프로그램을 작성하시오.<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<div id="result2"></div>
+</div>
+
+
+</body>
+</html>

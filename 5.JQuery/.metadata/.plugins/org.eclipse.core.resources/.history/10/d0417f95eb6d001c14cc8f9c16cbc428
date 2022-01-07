@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+proc1 = () =>{
+	arr = ["Hello", "GoodMorning", "happy new Year",
+			"Merry Christmas", "우리의 영웅 Hero"]
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>요소생성및 삭제</h3>
+	생성클릭시 랜덤으로 발생하는 문자열을 result1에 추가한다 <br>
+	삭제클릭시 뒤에서부터 문자를 삭제한다.<br>
+	<input type="button" value="생성" onclick="proc1()">
+	<input type="button" value="삭제" onclick="proc2()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

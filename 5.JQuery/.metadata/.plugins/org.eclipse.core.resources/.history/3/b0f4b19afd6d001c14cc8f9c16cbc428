@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+proc1=()=>{
+   //각 요소들을 검색하여 입력한 값을 가져오기
+   
+   vname = document.ff.name.value.trim();
+   
+   //공백검증
+   if(vname.length < 1){
+	   alert("이름 입력하세요.");
+	   return false;
+   }
+   //길이검증
+   if(vname.length > 10 || vname.length < 2){
+	   alert("이름 2~10사이 입니다.")
+	   return false;
+   }
+   
+   //정규식 - 형식체크 - 정규식.test(값) - true/false 리턴
+   regname = /^[가-힣]{2,10}$/;
+   if(!(regname.test(vname))){
+	   alert("이름 형식오류입니다.")
+	   return false;
+   }
+   
+   //2. 아이디에 대하여
+   vid = document.ff.username.value.trim();
+   
+   //공백
+   if(vid.length < 1){
+	   alert("아이디를 입력하세요.");
+	   return false;
+   }
+   
+   //길이 4~13
+   if(vname.length < 4 || vname.length > 13){
+	   alert("아이디 길이는  4~13사이 입니다.")
+	   return false;
+   }
+   
+   //정규식
+   regname = /^[가-힣]{2,10}$/;
+   if(!(regname.test(vname))){
+	   alert("이름 형식오류입니다.")
+	   return false;
+   }
+   
+   
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+   <div id="result1">
+      <h3>회원가입</h3>
+      <form name="ff">
+         이름: <input type='text' name="name" id='name' ><br>
+         주소: <input type='text' name="addr" id='addr' ><br>
+         생일: <input type='date' name="birthday" id='birthday' ><br>
+         아이디(6-8 문자): 
+         <input type='text' name="username" id='username' ><br>
+         이메일: <input type='email' name="email" id='email' ><br>
+         휴대폰: <input type='tel' name="phone" id='phone' ><br>
+         <input type='button' value='확인' onclick="proc1()"><br>
+      </form>
+   </div>
+</div>   
+</body>
+</html>

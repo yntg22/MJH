@@ -1,0 +1,71 @@
+package kr.or.ddit.basic;
+
+import java.io.File;
+import java.io.IOException;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class JackSon01 
+{
+ 
+    public static void main(String[] args) {
+    	
+    	ObjectMapper objectMapper = new ObjectMapper();
+    	JackSon01 user = new JackSon01("Ryan", 30);
+    	
+    	try {
+			objectMapper.writeValue(new File("user.json"), user);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	// 파일 출력: user.json 
+    	//{"name":"Ryan","age":30} 
+    	// 문자열 출력
+    	try {
+			String userAsString = objectMapper.writeValueAsString(user);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	//{"name":"Ryan","age":30}
+    	
+    	// String to Object
+    	String json = "{ \"name\" : \"Ryan\", \"age\" : 30 }";
+    	try {
+			JackSon01 user1 = objectMapper.readValue(json, JackSon01.class);
+			System.out.println(user1);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+    	// JSON File to Object
+//    	try {
+//			JackSon01 user1 = objectMapper.readValue(new File("user.json"), JackSon01.class);
+//			System.out.println(user1);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+    	// JSON URL to Object
+//    	JackSon01 user = objectMapper.readValue(new URL("file:user.json"), JackSon01.class);
+    	
+    	
+    }
+    
+
+
+
+	private String name; 
+	private int age; 
+	public JackSon01(String name, int age) {
+	this.name = name; this.age = age; 
+	} 
+	public String getName() { 
+	return name;
+	}
+	public int getAge() {
+		return age; 
+	} 
+	}

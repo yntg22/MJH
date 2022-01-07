@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+proc1 = () => {
+	res = "protocol : " + location.protocol + "<br>";
+	res += "hostname : " + location.hostname + "<br>";
+	res += "port : " + location.port + "<br>";
+	res += "pathname : " + location.pathname + "<br>";
+	res += "href : " + location.href + "<br>";
+}
+
+</script>
+
+</head>
+<body>
+
+<div class="box">
+	<h3>location객체</h3>
+	url의 정보를 얻는다<br>
+	host<br>
+	hostname<br>
+	port<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

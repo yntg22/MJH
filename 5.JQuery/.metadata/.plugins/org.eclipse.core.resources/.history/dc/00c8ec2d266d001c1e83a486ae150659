@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>winMain</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+
+proc1 = () => {
+	
+	open("winsub.html", "_blank", "width=300 height=400");
+}
+
+</script>
+
+</head>
+<body>
+
+<div class="box">
+	<h3>win Main</h3>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+img{
+   width: 50px;
+   height: 150px;
+   border-radius : 50%;
+   margin:  10px; 
+}
+</style>
+<script>
+rand = 0;
+
+proc1 = (but) => {
+   //종료클릭시 선택된 이미지의 테두리를 삭제한다.
+   rand1 = Math.floor(Math.random()*7);
+   imgbox = document.getElementsByTagName('img')[rand];
+   
+   
+   rand = rand1;
+   
+   imgbox.style.border = "none";
+   
+   //id  = result1를 검색 - 부모노드
+   parent = document.getElementById('result1');
+   
+   //클릭한 시작버튼을 안 보이게 설정
+   but.style.display = "none";
+   gbut = but;
+   
+   box = setInterval(function(){
+      //첫번째 자식을 선택 - 자식 노드
+      child = parent.firstChild;
+      //뒤로 이동 - 부모노드.appendChild(자식노드)
+      parent.appendChild(child);
+      
+   },300)
+}
+
+proc2 = () => {
+   //시작 버튼을 보이게 설정
+   gbut.style.display = "inline";
+   //룰렛을 멈춘다.
+   clearInterval(box);
+   //랜덤으로 이미지 한 개를 선택하여 테두리에 설정한다. 
+   imgbox = document.getElementsByTagName('img')[rand];
+   imgbox.style.border = "10px dotted red";  
+   
+   
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+   <h3></h3>
+   <input type="button" value="시작" onclick="proc1(this)">
+   <input type="button" value="종료" onclick="proc2()">
+   <div id="result1">
+         <img src = "../images/가구1.jpg" alt = "가구1.jpg">
+         <img src = "../images/가구2.jpg" alt = "가구2.jpg">
+         <img src = "../images/가구3.jpg" alt = "가구3.jpg">
+         <img src = "../images/가위_우.PNG" alt = "가위_우.PNG">
+         <img src = "../images/가위_좌.PNG" alt = "가위_좌.PNG">
+         <img src = "../images/공유.jpg" alt = "공유.jpg">
+         <img src = "../images/대나무숲.jpg" alt = "대나무숲.jpg">
+   </div>
+</div>
+</body>
+</html>

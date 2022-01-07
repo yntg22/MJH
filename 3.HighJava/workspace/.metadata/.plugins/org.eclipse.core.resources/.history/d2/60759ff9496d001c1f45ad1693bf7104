@@ -1,0 +1,32 @@
+package kr.or.ddit.basic;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class jsonTest02 {
+
+	public static void main(String[] args) throws ParseException
+	{
+		String json = "{\"response\":{\"name\":\"서울\",\"age\":10}}";
+		
+		// 파싱 객체 생성
+		JSONParser parser = new JSONParser();
+		
+		// json object로 파싱해온다.
+		JSONObject object = (JSONObject) parser.parse(json); //json문자열을 parse()하여 JSON Object형태로 변환
+		
+		// 먼저 response 객체를 받아온다
+		JSONObject parse_response = (JSONObject) object.get("response");
+		
+		String name = (String) parse_response.get("name"); //key 값을 사용하여 데이터 가져옴
+		
+		int age = ((Long)parse_response.get("age")).intValue();// json의 기본 반환형은 Long형이라서 int형으로 변환
+		
+		System.out.println("파싱 완료 : name = " + name);
+		System.out.println("파싱 완료 : age = " + age);
+
+
+	}
+
+}

@@ -1,0 +1,6 @@
+package kr.or.ddit.basic;
+
+// 이 쓰레드는 소켓을 통해서 메시지를 받아서 화면에 출력하는 역할을 담당한다
+public class Receiver extends Thread{
+
+}

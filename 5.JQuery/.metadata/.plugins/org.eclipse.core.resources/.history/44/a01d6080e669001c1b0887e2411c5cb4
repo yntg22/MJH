@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+   today = new Date();
+   tomilli = new Date(1230000);
+   tostr = new Date("2021.12.31");
+   to = new Date(2021, 12-1, 31, 11, 46);
+
+proc1 = () => {
+   str = today.toLocaleString() + "<br>";
+   str += tomilli.toLocaleString() + "<br>";
+   str += tostr.toLocaleString() + "<br>";
+   str += to. toLocaleString() + "<br>";
+   
+   document.getElementById('result1').innerHTML = str;
+}   
+   
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>date객체 생성</h3>
+	new Date() // 현재 날짜와 시간<br>
+	new Date(milliseconds) //1970/01/01 이후의 밀리초<br>
+	new Date(dateString)<br>
+	new Date(year, month, date[, hours[, minutes[, seconds[,ms]]]])<br>
+	
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>

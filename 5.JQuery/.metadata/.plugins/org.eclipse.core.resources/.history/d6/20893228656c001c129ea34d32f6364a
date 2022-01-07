@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+proc1 = () => {
+	//입력
+	value = prompt("주민등록번호를 입력하세요 ex)960423-1069012");
+	//앞 6자리를 2자리씩 추출
+	
+	//뒤1자리를 추출
+	
+	
+}
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	주민등록번호를 입력 받아 생년월일과 성별을 출력하는 프로그램.<br>
+	(입력은 prompt로 입력받는다 110326-4432618)<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1"></div>
+</div>
+</body>
+</html>
