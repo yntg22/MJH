@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<!-- 이 문서는 ibatis에서 처리할 SQL문을 작성하는 문서입니다... -->	
+<sqlMap namespace="ibatisTest">
+	<!-- 
+		이 부분에 처리한 SQL문에 맞는 태그를 사용하여 SQL문을 작성한다.
+		
+		사용할 수 있는 기본적인 태그들...
+		<select>~~~</select>
+		<insert>~~~</insert>
+		<update>~~~</update>
+		<delete>~~~</delete>
+		...
+	 -->
+	 
+	 
+	 
+	 
+</sqlMap>

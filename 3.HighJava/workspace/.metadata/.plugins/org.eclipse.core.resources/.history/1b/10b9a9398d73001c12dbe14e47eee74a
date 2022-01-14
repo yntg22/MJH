@@ -1,0 +1,115 @@
+package kr.or.ddit.board.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import kr.or.ddit.board.vo.BoardVO;
+import kr.or.ddit.util.DBUtil3;
+
+public class BoardDaoImpl implements IBoardDao {
+	
+	//1
+	private static BoardDaoImpl dao;
+	
+	//2
+	private BoardDaoImpl() {}
+	
+	//3
+	public static BoardDaoImpl getInstance() {
+		if(dao==null) dao = new BoardDaoImpl();
+		
+		return dao;
+	}
+
+	@Override
+	public int insertBoard(BoardVO boardVo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int cnt = 0;
+		try {
+			conn = DBUtil3.getConnection();
+			
+			String sql = "insert into jdbc_board "
+					+ "	values(board_seq.nextVal,?,?,sysdate,0,?)";
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, boardVo.getBoard_title());
+			pstmt.setString(2, boardVo.getBoard_writer());
+			pstmt.setString(3, boardVo.getBoard_content());
+			
+			cnt = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
+			if(conn!=null) try { conn.close(); } catch (SQLException e) {}
+		}
+		
+		return cnt;
+	}
+
+	@Override
+	public int deleteBoard(int boardNum) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		int cnt = 0;
+		try {
+			conn = DBUtil3.getConnection();
+			String sql = "delete jdbc_board where board_no = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, boardNum);
+			
+			cnt = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
+			if(conn!=null) try { conn.close(); } catch (SQLException e) {}
+		}
+		return cnt;
+	}
+
+	@Override
+	public int updateBoard(BoardVO boardVo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int cnt = 0;
+		try {
+			conn = DBUtil3.getConnection();
+			String sql = "update jdbc_board set board_title=?, board_content=?"
+					+ " where board_no = ?";
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, boardVo.getBoard_title());
+			pstmt.setString(1, boardVo.getBoard_content());
+			pstmt.setInt(1, boardVo.getBoard_no());
+			
+			cnt = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
+			if(conn!=null) try { conn.close(); } catch (SQLException e) {}
+		}
+		return 0;
+	}
+
+	@Override
+	public List<BoardVO> getAllBoard() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> searchBoard(String boardTitle) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src=../js/jquery-3.6.0.min.js></script>
+<script>
+$(function(){
+	$('#btn1').on('click', function(){
+		
+		$.ajax({
+			url : 'buyerNames.jsp',
+			type : 'get',
+			success : function(res){
+					
+				alert(res[i].id);
+			},
+			error : function(xhr, err){
+				alert("상태 : " + xhr.status + 
+						"\ntext : " + xhr.statusText + 
+						"\nmessage : " + arr.reponseText);
+			},
+			dataType : 'json'
+		})
+	})
+})
+</script>
+
+<style>
+table{
+	border : 1px solid hotpink;
+}
+
+td{
+	height: 50px;
+	padding: 5px;
+	text-align: center;
+}
+
+#bnames{
+	width : 200px;
+	height: auto; 
+}
+
+#detail{
+	width: 500px;
+}
+
+.tr1{
+	background: lightblue;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" id="btn1">
+	<div id="result1">
+		<table border="1">
+			<tr class="tr1">
+				<td>거래처이름</td>
+				<td>거래처 상세정보</td>
+			</tr>
+			<tr>
+				<td id="bnames"></td>
+				<td id="detail"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

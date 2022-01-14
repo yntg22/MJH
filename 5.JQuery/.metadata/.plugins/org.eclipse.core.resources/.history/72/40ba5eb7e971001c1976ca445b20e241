@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<!-- 원래는 ? 이렇게 적어야함 -->
+<script src="http://192.168.135.28/jqpro/js/jquery-3.6.0.min.js"></script>
+<script>
+
+	$(function(){
+// 		btn1 클릭하면
+		$('#btn1').on('click', function(){
+// 			form안에 있는 모든것
+			$('form *:enabled').css('border','3px solid orange');
+			
+			$('form *:disabled').css('border','3px solid red');
+		})
+	
+// 		on('focus') 커서가 올라갔을때
+// 		on('blur') 커서가 나갔을때
+
+// 		$('input[type=password]') => 속성선택자
+// 		$('input:password') => 폼 양식 선택자
+// 		$(':password') => 폼 양식 선택자
+
+		$(':password').on('blur', function(){
+			//입력한 값을 가져온다 val()
+			pvalue = $(this).val().trim();
+// 			alert(pvalue);
+
+			if(pvalue.length > 0){
+				$('select').prop('disabled', false);
+			}else{
+				$('select').prop('disabled', true);
+			}
+			
+		})
+		
+		$('#btn2').on('click', function(){
+			
+// 			$('input[type=checkbox]:checked')
+// 			$('input:checkbox:checked')
+			
+			//반복문
+// 			$(':checkbox:checked').each(function(){
+// 				chvalue = $(this).val()
+// 				alert(chvalue);
+						
+// 						v가 this랑 똑같은 역할이다..?
+// 						그럼 i는 모임
+				$(':checkbox:checked').each(function(i, v){
+				chvalue = $(v).val()
+				alert(chvalue);
+				
+			})
+		})
+
+		
+		
+	})
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	password에서 커서가 벗어나면 select의 상태를 사용가능으로 변경 <br>
+	prop('disabled', false) => 사용가능으로 변경<br>
+	prop('disabled, true) => 사용불가능으로 변경<br>
+	<input type="button" value="확인" id="btn1">
+	<div id="result1">
+			<form>
+<!-- 			속성들 => type name value onclick 등등 태그안에들어가는 속성 attribute > attr() -->
+				아이디<input type="text" name="id" value="a001" ><br>
+			        비밀번호<input type="password" name="pass">
+				<br>
+				
+				<br>
+				<select name="disSelect" disabled="disabled">
+<!-- 				disabled =>prop라고부름 boolean타입같은느낌 > prop() -->
+					<option>Option1</option>
+					<option>Option2</option>
+					<option>Option3</option>
+					<option>Option4</option>
+				</select> <br><br>
+				<textarea name="enTextarea" rows=10 cols=20>text</textarea>
+				<br> <input type="button" value="확인 " disabled="disabled" onclick="alert('hello')"> <br>
+
+			</form>
+			</div>
+
+	<input type="button" value="확인" id="btn2">
+	<div id="result2">
+			<form>
+				취 미 :
+				 <input type="checkbox" name="hobby" value="여행" checked >여행
+				 <input type="checkbox" name="hobby" value="장기">장기 
+				 <input type="checkbox" name="hobby" value="바둑">바둑 
+				 <input type="checkbox" name="hobby" value="독서">독서
+				 <input type="checkbox" name="hobby" value="낚시">낚시
+				 <br><br>
+			</form>
+		</div>
+
+		<input type="button" value="확인" id="btn3">
+		<div id="result3">
+			<form>
+				
+					<select name="spring" id="spring" multiple size="6">
+					<option>개나리</option>
+					<option selected>진달래</option>
+					<option>민들레</option>
+					<option selected>벚꽃</option>
+					<option>목련</option>
+					<option>철쭉</option>
+
+				</select>
+			</form>
+
+		</div>
+
+	</div>
+</body>
+</html>

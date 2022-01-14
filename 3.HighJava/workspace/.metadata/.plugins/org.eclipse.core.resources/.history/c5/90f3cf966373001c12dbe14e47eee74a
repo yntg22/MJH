@@ -1,0 +1,27 @@
+package kr.or.ddit.mvc.dao;
+
+import kr.or.ddit.mvc.vo.MemberVO;
+
+/**
+ * SQL문을 DB서버에 보내서 결과를 얻어오는 역할을 수행하는 클래스
+ * 이 클래스에서 작성된 메서드는 메서드 하나가 DB와 관련된 작업 1개를
+ * 수행하도록 작성한다.
+ *	@author 지농
+ */
+
+
+public interface IMemberDao {
+	/**
+	 * MemberVO객체에 담겨진 자료를 DB에 insert하는 메서드
+	 * @param memVo DB에 insert할 자료가 저장된 MemberVO
+	 * @return 작업 성공 : 1이상의 정수, 작업실패 : 0
+	 */
+	public int insertMember(MemberVO memVo);
+	
+	/**
+	 * 회원 ID를 매개변수로 받아서 해당 회원 정보를 삭제하는 메서드
+	 * @param memId 삭제할 회원ID(String
+	 * @return 작업성공 : 1, 작업실패 : 0
+	 */
+	public int deleteMember(String memId);
+}

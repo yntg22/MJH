@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" id="btn1">
+	<div id="result1">
+			<p>보이는 문단</p>
+			<p style="visibility: hidden;">숨겨진 문단</p>
+			<p style="display: none;">자리를 차지 하지 못한 문단</p>
+			<p style="opacity: 0;">투명한 문단</p>
+
+		</div>
+</div>
+</body>
+</html>

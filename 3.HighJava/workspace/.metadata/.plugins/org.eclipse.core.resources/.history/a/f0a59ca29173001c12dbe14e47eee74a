@@ -1,0 +1,31 @@
+package kr.or.ddit.board.controller;
+
+import java.util.Scanner;
+
+import kr.or.ddit.board.service.BoardServiceImpl;
+import kr.or.ddit.board.service.IBoardService;
+
+public class BoardController {
+	private IBoardService boardService;
+	private Scanner scan = new Scanner(System.in);
+	
+	//생성자
+	public BoardController() {
+		boardService = BoardServiceImpl.getInstance();
+	}
+	
+	public static void main(String[] args) {
+		new BoardController().boardStart();
+		
+	}
+
+	private void boardStart() {
+		System.out.println();
+		System.out.println("====================================");
+		System.out.println("제목              내용            작성자          조회수 ");
+		System.out.println("====================================");
+		boardService.getAllBoard();
+		
+	}
+
+}

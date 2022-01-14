@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<!-- 이 문서는 ibatis에서 처리할 SQL문을 작성하는 문서입니다... -->	
+<sqlMap namespace="ibatisTest">
+	<!-- 
+		이 부분에 처리한 SQL문에 맞는 태그를 사용하여 SQL문을 작성한다.
+		
+		사용할 수 있는 기본적인 태그들...
+		<select>~~~</select>
+		<insert>~~~</insert>
+		<update>~~~</update>
+		<delete>~~~</delete>
+		...
+	 -->
+	 
+	 <!-- 
+	 	id속성 => 실행할 태그를 Java소스에서 호출할 때 사용되는 이름으로
+	 			sqlMap태그의 namespace속성과 연결하여 사용한다.
+	 			(예:	ibatisTest.insertLprod )
+	 			
+	 	parameterClass => SQL문에 사용될 데이터가 저장될 객체를 기술한다.
+	 			(보통 VO클래스명, 자바의 기본자료형이름, Collection객체이름 등이 사용된다.)
+	 			(VO클래스명을 기술할 때는 해당 클래스의 전체 이름을 기술해야 한다.)
+	 			
+	 			==> typeAlias에 지정한 alias명을 사용할 수 있다.
+	  -->
+	  
+	 <insert id="insertLprod" parameterClass="lprodVo">
+	 	insert into lprod (lprod_id, lprod_gu, lprod_nm)
+	 	values ( #lprod_id#, #lprod_gu#, #lprod_nm# )
+	 </insert>
+	 
+	 <update id="updateLprod" parameterClass="lprodVo">
+	 	update lprod set lprod_id=#lprod_id#, lprod_nm=#lprod_nm#
+	 	where lprod_nm = #lprod_nm#
+	 </update>
+	 
+</sqlMap>

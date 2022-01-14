@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+	/* $('p').on('mouseover',function(){
+// 		$(this).css('background','yellow');	
+		$(this).addClass('bcolor');
+	})
+	
+	$('p').on('mouseout',function(){
+// 		$(this).css('background','white');
+		$(this).removeClass('bcolor');
+	}) */
+	
+	$('#result1 p').hover(function(){
+		//mouseover
+		$(this).addClass('bcolor');
+	},function(){
+		//mouseout
+		$(this).removeClass('bcolor');
+	})
+	
+	$('#result2 p').on('click', function(){
+		$(this).toggleClass('bcolor');
+	})
+})
+</script>
+
+<style>
+	.bcolor{
+		background : yellow;
+	}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<h3>동적 css</h3>
+	addClass('bcolor')<br>
+	removeClass('bcolor')<br>
+	<div id="result1">
+	<p>무궁화 꽃이 피었습니다</p>
+	<p>능소화 꽃이 피었습니다</p>
+	<p>봉선화 꽃이 피었습니다</p>
+	</div>
+</div>
+
+<div class="box">
+	<h3></h3>
+	toggleClass('bcolor') : addClass()와 removeClass()를<br>
+	동작하나에 번갈아 가면서 수행<br>
+
+	<div id="result2">
+	<p>무궁화 꽃이 피었습니다</p>
+	<p>능소화 꽃이 피었습니다</p>
+	<p>봉선화 꽃이 피었습니다</p>
+	</div>
+</div>
+</body>
+</html>

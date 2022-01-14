@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src=../js/jquery-3.6.0.min.js></script>
+
+<script>
+$(function(){
+	$('#btn1').on('click',function(){
+		$.ajax({
+			url : '../0113/text.jsp',
+			type : 'get',
+			success : function(res){
+					//res = 홍길동/개나리/진달래/무궁화/삼천리/금수강산
+					
+					vres = res.split("/");
+					code = "<ul>";
+					
+					$.each(vres, function(i){
+						code += "<li>" + vres[i] + "</li>";
+					})
+					
+					code += "</ul>";
+					
+					$('#result1').html(code);
+					
+			},
+			error : function(xhr){
+				alert("상태 : " + xhr.status)
+				// 200 404 403 500 
+			},
+			dataType : 'text'
+		})
+		
+	})
+	
+	
+	$('#btn2').on('click',function(){
+		$.ajax({
+			url : '../0113/jobj.jsp',
+			type : 'get',
+			success : function(res){
+				
+				code = "아이디 : " + res.id + "<br>";
+				code += "이름 : " + res.name + "<br>";
+				code += "주소 : " + res.addr + "<br>";
+				code += "전화번호 : " + res.tel+ "<br>";
+				
+				$('#result2').html(code);
+			},
+			error : function(xhr){
+				alert("상태 : " + xhr.status);
+			},
+			dataType : 'json'
+		})
+	})
+	
+	$('#btn3').on('click', function(){
+		
+		$.ajax({
+			url : '../0113/arr.jsp',
+			type : 'get',
+			success : function(res){
+				
+				code="<ol>";
+				
+			$.each(res, function(i){
+				code += "<li>" + res[i] + "</li>";
+			})
+			
+			$('#result3').html(code);
+				
+				
+			},
+			error : function(xhr){
+				alert("상태 : " + xhr.status);
+			},
+			dataType : 'json'
+		})
+	})
+})
+</script>
+<style>
+table{
+	border : 1px solid orange;
+}
+
+td{
+	width : 200px;
+	height : 40px;
+	text-align : center;
+}
+
+div.box{
+	height : 500px;
+}
+
+.box div{
+	width : 20%;
+	float : left;
+	margin : 5px;
+}
+
+#result4{
+	height : 300px;
+	overflow: auto;
+}
+.aa{
+	color : blue;
+	font-size : 1.2em;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<h3>jQuery를 사용한 AJAX</h3>
+	
+	<input type="button" value="text" id="btn1">
+	<input type="button" value="jobj" id="btn2">
+	<input type="button" value="jarr" id="btn3">
+	<input type="button" value="objarr" id="btn4">
+	<br>
+	<div id="result1"></div>
+	<div id="result2"></div>
+	<div id="result3"></div>
+	<div id="result4"></div>
+</div>
+</body>
+</html>

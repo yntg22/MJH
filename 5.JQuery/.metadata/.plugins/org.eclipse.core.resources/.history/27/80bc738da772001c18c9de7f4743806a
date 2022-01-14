@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+img{
+	width : 100px;
+	height : 100px;
+}
+p{
+	border : 1px solid green;
+}
+</style>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+	$('p').on('click', function(){
+// 		text = $(this).text().trim();
+		text = $(this).attr('title');
+		
+		//이미지 태그 생성
+// 		$('<img src="../images/'+ text +'.jpg"');
+		$('<img>',{
+				'src' : '../images/'+text+'.jpg',
+				'alt' : text
+				}).appendTo(this);
+	})
+})
+
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>appendTo</h3>
+	p태그 테두리를 벗어나지 않으면서 안쪽에서 마지막에 추가된다<br>
+	appendTo(selector)<br>
+	append(content)<br>
+	
+	<div id="result1">
+	<p title="Tulips">튜울립</p>
+ 	<p title="Chrysanthemum">국화</p>
+  	<p title="Koala">코알라</p>
+  	<p title="Hydrangeas">수국</p>
+	</div>
+</div>
+
+<div class="box">
+	<h3>prepend</h3>
+	p태그 테두리를 벗어나지 않으면서 안쪽에서 처음에 추가된다<br>
+	prependTo(selector)<br>
+	prepend(content)<br>
+	
+	<div id="result2">
+	<p title="Tulips">튜울립</p>
+ 	<p title="Chrysanthemum">국화</p>
+  	<p title="Koala">코알라</p>
+  	<p title="Hydrangeas">수국</p>
+	</div>
+</div>
+</body>
+</html>

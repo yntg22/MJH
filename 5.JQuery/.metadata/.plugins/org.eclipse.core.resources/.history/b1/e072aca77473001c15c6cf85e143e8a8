@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		//확인버튼 클릭하면 똑같은 버튼을 만들어서 result에 추가한다
+// 		$('.btn').bind('click', function(){ })
+		$('.btn').on('click', function(){
+			$('<input>',{
+				'type' : 'button',
+				'value' : '확인',
+				'class' : 'btn'
+			}).appendTo($('#result1'));
+		})
+	})
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" id="btn">
+	<br>
+	<input type="button" id="clear" value="해제">
+	<div id="result1">
+	
+	</div>
+</div>
+</body>
+</html>

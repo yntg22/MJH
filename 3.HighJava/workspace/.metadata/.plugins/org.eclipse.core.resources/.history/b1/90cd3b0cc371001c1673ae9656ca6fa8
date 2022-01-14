@@ -1,0 +1,61 @@
+package kr.or.ddit.basic;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class JdbcTest06T {
+	private Connection conn;
+	private Statement stmt;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	
+	private Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		new JdbcTest06T().memberStart();
+
+	}
+
+	// 시작 메서드
+	private void memberStart() {
+		System.out.println();
+		System.out.println("=======================");
+		System.out.println("    회 원 관 리 프 로 그 램 ");
+		System.out.println("=======================");
+		System.out.println();
+		while(true) {
+			int choice = displayMenu();
+			switch(choice) {
+			case 1: break;
+			case 2: break;
+			case 3: break;
+			case 4: break;
+			case 0: 
+				System.out.println("프로그램을 종료합니다.");
+				return;
+			default : System.out.println("작업 번호를 잘못 입력했습니다. 다시입력하세요");
+			}
+		}
+	}
+	
+	// 메뉴를 출력하고 선택한 작업번호를 반환하는 메서드
+	private int displayMenu() {
+		System.out.println();
+		System.out.println();                       
+		System.out.println("=== 작업 선택 ===");
+		System.out.println("   1. 자료 추가");
+		System.out.println("   2. 자료 삭제");
+		System.out.println("   3. 자료 수정");
+		System.out.println("   4. 전체 자료 출력");
+		System.out.println("   0. 작업 끝.");
+		System.out.println("----------------");
+		System.out.println("작업 번호 >> ");
+		int num = scan.nextInt();
+		
+		return num;
+	}
+
+}

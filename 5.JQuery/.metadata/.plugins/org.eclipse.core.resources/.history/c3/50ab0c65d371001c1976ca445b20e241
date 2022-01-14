@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<style>
+table,td,tr{
+	border : 1px solid blue;
+}
+</style>
+<script>
+
+	function proc1(){
+		$('li:first, li:last').css('background','yellow')
+		
+		$('li:eq(5)').css('background', 'red')
+		
+		$('li:lt(4)').css({'font-size' : '2.0em',
+						   'font-weight' : 'bold'})
+	}
+	
+	function proc2(){
+		$('tr:even').css('background','gray').css('width','550px')
+		
+	}
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1">
+			<ul>
+				<li>one</li>
+				<li>two</li>
+				<li>three</li>
+				<li>four</li>
+				<li>five</li>
+				<li>six</li>
+				<li>seven</li>
+				<li>eight</li>
+				<li>nine</li>
+			</ul>
+			
+		</div>
+		
+</div>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" onclick="proc2()">
+	<div id="result2">
+			<table>
+				<tr>
+				<td>one</td>
+				<td>62만원</td>
+				</tr>
+				<tr>
+				<td>two</td>
+				<td>45만원</td>
+				</tr>
+				<tr>
+				<td>three</td>
+				<td>3만원</td>
+				</tr>
+				<tr>
+				<td>four</td>
+				<td>72만원</td>
+				</tr>
+				<tr>
+				<td>five</td>
+				<td>77만원</td>
+				</tr>
+				<tr>
+				<td>six</td>
+				<td>54만원</td>
+				</tr>
+				<tr>
+				<td>seven</td>
+				<td>61만원</td>
+				</tr>
+				<tr>
+				<td>eight</td>
+				<td>52만원</td>
+				</tr>
+				<tr>
+				<td>nine</td>
+				<td>88만원</td>
+				</tr>
+			
+			</table>
+			
+		</div>
+		
+</div>
+</body>
+</html>

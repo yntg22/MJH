@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+	
+	$('img').attr('title', '이미지');
+	
+	$('img').attr('title', function(){
+		//src의 속성값을 가져온다
+		vsrc = $(this).attr('src');
+		
+		//vsrc에서 마지막 /와 .의 위치를 얻는다
+		start =;
+		end = ;
+		
+		//src에서 start와 end사이의 값
+		return 결과값;
+	})
+	
+	
+})
+
+
+</script>
+
+<style>
+	img{
+		width : 200px;
+		height : 200px;
+	}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+	<h3>속성설정</h3>
+	attr('title','이미지')<br>
+	attr('title','function(){ <br>
+		  title에 설정될 값들을 생성하여 리턴
+	})
+	
+	<input type="button" value="확인">
+	<div id="result1">
+	<img src="../images/단풍.jpg" alt="단풍.jpg">
+	<img src="../images/대나무숲.jpg" alt="대나무숲.jpg">
+	<img src="../images/스포츠.jpg" alt="스포츠.jpg">
+	<img src="../images/딸기스무디.jpg" alt="딸기스무디.jpg">
+	<img src="../images/식품2.jpg" alt="식품2.jpg">
+	
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<!-- 원래는 ? 이렇게 적어야함 -->
+<script src="http://192.168.135.28/jqpro/js/jquery-3.6.0.min.js"></script>
+<script>
+
+	$(function(){
+		$('#btn1').on('click', function(){
+			
+		})
+	})
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인">
+	<div id="result1">
+			<form>
+<!-- 			속성들 => type name value onclick 등등 태그안에들어가는 속성 attribute > attr() -->
+				<input type="text" id="btn1" name="id" value="a001" ><br>
+			    <input type="password" name="pass">
+				<br><br>
+				<select name="disSelect" disabled="disabled">
+<!-- 				disabled =>prop라고부름 boolean타입같은느낌 > prop() -->
+					<option>Option1</option>
+					<option>Option2</option>
+					<option>Option3</option>
+					<option>Option4</option>
+				</select> <br><br>
+				<textarea name="enTextarea" rows=10 cols=20>text</textarea>
+				<br> <input type="button" value="확인 " onclick="alert('hello')"> <br>
+
+			</form>
+
+		</div>
+</div>
+</body>
+</html>

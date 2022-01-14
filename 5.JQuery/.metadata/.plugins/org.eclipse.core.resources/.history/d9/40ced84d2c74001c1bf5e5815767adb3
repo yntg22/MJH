@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		/* $('#btn1').on('click', function(){
+			//입력한 값을 가져온다
+			
+		}) */
+		
+		//비동기 처리
+		$('#btn2').on('click', function(){
+			
+			xhr = new XMLHttpRequest();
+			
+			//입력한 값을 가져온다
+			$('#id2').val().trim();
+			name = $('#name2').val().trim();
+			
+			//요청 - open() / send()
+			xhr.open("ajax.jsp?id=" + id + "&name="+name, "get", true);
+			xhr.send();
+			
+			//응답
+			
+		})
+	})
+
+</script>
+
+</head>
+<body>
+
+<div class="box">
+   <h3>비동기(ajax)를 사용하지 않는 방식</h3>
+   서버의 처리결과 = status <br>
+   200<br>
+   404<br>
+   403<br>
+   
+   <form action="ajax.jsp" method="post">
+      <input type="submit" value="확인">
+      <div id="result1">
+        	 아이디<input type="text" name="id" id="id"><br>
+         	이름<input type="text" name="name" id="name"><br>
+      </div>
+   </form>
+</div>
+
+<div class="box">
+   <h3>비동기(ajax)를 사용하는 방식</h3>
+   <form>
+      <input type="button" value="확인">
+      <div id="result2">
+         	아이디<input type="text" name="id" id="id"><br>
+         	이름<input type="text" name="name" id="name"><br>
+      </div>
+   </form>
+   
+   <div id="boxres2"></div>
+</div>
+</body>
+</html>

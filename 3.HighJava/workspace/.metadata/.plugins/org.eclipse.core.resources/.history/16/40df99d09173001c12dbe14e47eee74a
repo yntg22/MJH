@@ -1,0 +1,45 @@
+package kr.or.ddit.board.controller;
+
+import java.util.List;
+import java.util.Scanner;
+
+import kr.or.ddit.board.service.BoardServiceImpl;
+import kr.or.ddit.board.service.IBoardService;
+import kr.or.ddit.board.vo.BoardVO;
+
+public class BoardController {
+	private IBoardService boardService;
+	private Scanner scan = new Scanner(System.in);
+	
+	//생성자
+	public BoardController() {
+		boardService = BoardServiceImpl.getInstance();
+	}
+	
+	public static void main(String[] args) {
+		new BoardController().boardStart();
+		
+	}
+
+	private void boardStart() {
+		
+		List<BoardVO> boardList = boardService.getAllBoard();
+		
+		System.out.println();
+		System.out.println("====================================");
+		System.out.println("제목              내용            작성자          조회수 ");
+		System.out.println("====================================");
+		if(boardList == null || boardList.size()==0) {
+			System.out.println("아직 등록된 게시물이 없습니다");
+		}else {
+			for(BoardVO boardvo : boardList) {
+				System.out.println(boardvo.getBoard_title()+"\t"+ 
+								   boardvo.getBoard_content()+"\t"+
+								   boardvo.getBoard_writer()+"\t"+
+								   boardvo.getBoard_cnt()+"\n");
+			}
+		}
+		
+	}
+
+}

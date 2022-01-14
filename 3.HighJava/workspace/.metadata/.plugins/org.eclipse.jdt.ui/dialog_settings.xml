@@ -63,6 +63,64 @@
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
 	</section>
+	<section name="javadoc">
+		<item value="-charset UTF-8 -encoding UTF-8" key="vmparam"/>
+		<item value="public" key="access"/>
+		<item value="false" key="noindex"/>
+		<item value="D:\A_TeachingMaterial\3.HighJava\workspace\javaDocTest\javadoc.xml" key="antpath"/>
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="true" key="use"/>
+		<item value="true" key="author"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="false" key="nonavbar"/>
+		<item value="" key="docletpath"/>
+		<item value="D:\B_Util\2.Java\JDK1.8\bin\javadoc.exe" key="javadoc_command_history"/>
+		<item value="1.8" key="source"/>
+		<item value="true" key="version"/>
+		<item value="" key="docletname"/>
+		<item value="true" key="splitindex"/>
+		<item value="true" key="fromStandard"/>
+		<item value="false" key="notree"/>
+		<item value="D:\A_TeachingMaterial\3.HighJava\workspace\javaDocTest\doc" key="destdir"/>
+		<item value="false" key="openinbrowser"/>
+		<section name="projects">
+			<section name="enumTest">
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\enumTest\javadoc.xml" key="antpath"/>
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\enumTest\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="threadTest">
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\threadTest\javadoc.xml" key="antpath"/>
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\threadTest\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="javaIOtest">
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\javaIOtest\javadoc.xml" key="antpath"/>
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\javaIOtest\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="javaDocTest">
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\javaDocTest\javadoc.xml" key="antpath"/>
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\javaDocTest\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="javanetWorkTest">
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\javanetWorkTest\javadoc.xml" key="antpath"/>
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\javanetWorkTest\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="collectionTest">
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\collectionTest\javadoc.xml" key="antpath"/>
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\collectionTest\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="jdbcTest">
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\jdbcTest\javadoc.xml" key="antpath"/>
+				<item value="D:\A_TeachingMaterial\3.HighJava\workspace\jdbcTest\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+		</section>
+	</section>
 	<section name="SourceActionDialog.methods">
 		<item value="true" key="IgnoreDefault"/>
 		<item value="false" key="SynchronizedModifier"/>

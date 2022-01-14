@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	
+	<p class="pp" id="p1">무궁화 꽃이 피었습니다</p>
+	<p class="pp" id="p2">능소화 꽃이 피었습니다</p>
+	
+	<input type="button" value="clone" id="btn1">
+	<input type="button" value="clonetrue" id="btn2">
+	
+	<div id="result1"></div>
+	<div id="result2">s</div>
+</div>
+</body>
+</html>

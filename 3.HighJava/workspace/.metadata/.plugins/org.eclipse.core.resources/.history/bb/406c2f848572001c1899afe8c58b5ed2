@@ -1,0 +1,23 @@
+package kr.or.ddit.basic;
+// JavaDoc문서 파일 만들기 예제
+
+/**
+ *
+ * @author PC-01
+ * @version 1.0
+ *  
+ * <p>
+ * 파일명 : JavaDocTest.java <br>
+ * 설 명 : JavaDoc문서 작성을 위한 연습용 Interface<br><br>
+ * 
+ * 수정 이력<br>
+ * ----------------------------------------------<br>
+ * 수정일자 : 2020-01-11<br>
+ * 작업자 : 민진홍<br>
+ * 수정내용 : 최초 생성<br>
+ * </p>
+ */
+
+public interface javaDocTest {
+
+}

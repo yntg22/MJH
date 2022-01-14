@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		$('#btn1').on('click', function(){
+// 			$('#ff1').attr('action', 'jdbctest.jsp');
+// 			$('#ff1').attr('method', 'get');
+			
+			$('#ff1').attr('action', 'jdbctest.jsp')
+					 .attr('method', 'get')
+					 .submit();
+			
+		})
+		
+		$('#btn2').on('click', function(){
+			xhr = new XMLHttpRequest();
+			
+			//요청
+			xhr.open('get','jdbctest.jsp',true);
+			xhr.send();
+			
+			//응답
+			xhr.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					res = this.responseText;
+					$('#result2').html(res);
+				}
+			}
+		})
+		
+		$('#btn3').on('click', function(){
+			xhr = new XMLHttpRequest();
+			
+			//요청
+			xhr.open('get','jdbcjson.jsp',true);
+			xhr.send();
+			
+			//응답
+			xhr.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					res = JSON.parse(this.responseText);
+					
+				}
+			}
+		})
+	})
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3>동기 방식</h3>
+	<form id="ff1">
+	<input type="button" value="memberList" id="btn1">
+	<div id="result1"></div>
+	</form>
+</div>
+
+<div class="box">
+	<h3>비동기 방식</h3>
+	응답결과를 text/html 형식의 TABLE로 받아서 출력<br>
+	<input type="button" value="memberList" id="btn2">
+	<div id="result2"></div>
+</div>
+
+<div class="box">
+	<h3>비동기 방식</h3>
+	응답결과를 JSON 형식으로 받아서 TABLE로 출력<br>
+	<input type="button" value="memberList" id="btn2">
+	<div id="result2"></div>
+</div>
+</body>
+</html>

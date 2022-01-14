@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src=""></script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1">
+			<div></div>
+			<div>
+				헬로우~~ <span>오늘도 즐겁게~열심히!</span>
+			</div>
+			<p>Hello jQuery! <span>Thanks, jQuery!</span></p>
+			
+			<div class="myClass">jQuery!</div>
+			
+			<span class="notMyClass">쉬운 jQuery~~!</span>
+			
+			<div></div>
+			
+			<br><br>
+			<hr color="blue">
+			<br>
+	</div>
+</div>
+</body>
+</html>
