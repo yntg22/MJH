@@ -1,0 +1,11 @@
+<%@page import="kr.or.ddit.join.vo.ZipVO"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%
+//서블릿에서 저장한 값을 꺼낸다.
+	List<ZipVO> dong = (List<ZipVO>)request.getAttribute("list");    	
+    	
+    	
+%>

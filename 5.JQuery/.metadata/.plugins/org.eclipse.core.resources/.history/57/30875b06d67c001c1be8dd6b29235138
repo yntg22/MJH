@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sqlMap
+   PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+   "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="board">
+
+   <!-- //전체 리스트 -->
+   <select id="selectAllBoard" resultClass="boardVo">
+      select * from BOARD1
+   </select>
+
+
+   
+   <!-- //페이지별 리스트 가져오기 - 검색 포함 -->
+   
+   <!-- //글 저장 -->
+   <insert id="insertBoard" parameterClass="boardVo">
+   
+   </insert>
+   
+   <!-- //글 삭제 -->
+   <delete id="deleteBoard" parameterClass="int">
+   
+   </delete>
+   
+   <!-- //글 수정 -->
+   <update id="updateBoard" parameterClass="boardVo">
+   
+   </update>
+   
+   
+   <!-- //댓글 등록 -->
+   <update id="insertReply" parameterClass="replyVo">
+   
+   </update>
+   
+   <!-- //댓글 수정 -->
+   <update id="updateReply" parameterClass="replyVo">
+   
+   </update>
+   
+   <!-- //댓글 삭제 -->
+   <delete id="deleteReply" parameterClass="int">
+   
+   </delete>
+   
+   <!-- //댓글 리스트 -->
+   <select id="selectReply" resultClass="replyVo" parameterClass="int">
+   
+   </select>
+   
+   <!-- //조회수 증가 -->
+   <update id="IncrementHit" parameterClass="int">
+      update BOARD1 
+        set HIT = 
+            (select HIT from BOARD1 
+                where NUM = #num#) + 1 
+        where NUM = #num#
+   </update>
+   
+   <!-- //전체 글 갯수 가져오기 -->
+   <select id="selectReply" resultClass="int">
+      select count(*) from BOARD1
+   </select>
+
+
+</sqlMap>
+
+
+

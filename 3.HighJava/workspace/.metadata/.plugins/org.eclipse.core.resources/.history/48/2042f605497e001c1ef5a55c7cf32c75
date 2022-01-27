@@ -1,0 +1,49 @@
+package kr.or.ddit.basic.json;
+
+
+import java.sql.Connection;
+
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import kr.or.ddit.util.DBUtil3;
+
+public class LprodDaoImpl {
+	
+	private static LprodDaoImpl dao;
+	
+	private LprodDaoImpl() {}
+	
+	public static LprodDaoImpl getInstance() {
+		if(dao==null) dao = new LprodDaoImpl();
+		return dao;
+	}
+	
+	public LprodVO getLprod(LprodVO lprodvo) {
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		LprodVO lvo = null;
+		
+		try {
+			conn = DBUtil3.getConnection();
+			String sql = "select * from lprod";
+			
+			stmt = conn.createStatement();
+			
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				lvo = new LprodVO();
+				
+				lvo.setLprod_id(rs.getString("lprod_id"));
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

@@ -1,0 +1,38 @@
+package kr.or.ddit.basic;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ServletTest01 extends HttpServlet {
+
+	/*
+	 	Servlet이란? ==> 컨테이너에 의해 관리되는 자바 기반의 웹 컴포넌트로서
+	 			동적인 웹 컨텐츠를 생성을 가능하게 하는 기술을 말한다.
+	 
+	 */
+	
+	// Servlet클래스는 HttpServlet을 상속해서 작성한다
+	private static final long serialVersionUID = 1L;
+	
+		// Servlet클래스에서는 service()메서드 또는
+		// doGet()메서드, doPost()메서드를 재정의 해서 처리할 내용을 기술한다.
+	
+		// doGet() 메서드와 doPost()메서드는 service()메서드를 통해서 호출된다.
+		
+		// doGet()메서드나 doPost()메서드는 호출될 때 인수값으로
+		// HttpServletRequest객체와 HttpServletResponse객체를 받아온다.
+		// - HttpServletRequest객체 ==> 서비스 요청에 관련된 정보와 메서드를 관리하는 객체
+		// - HttpServletResponse객체 ==> 서비스 응답에 관련된 정보와 메서드를 관리하는 객체
+		
+		@Override				//요청객체					//응답객체
+		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			// TODO Auto-generated method stub
+			super.doGet(req, resp);
+		}
+		
+		
+}

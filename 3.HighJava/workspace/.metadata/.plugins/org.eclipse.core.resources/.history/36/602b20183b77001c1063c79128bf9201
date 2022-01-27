@@ -1,0 +1,14 @@
+package kr.or.ddit.basic;
+
+import org.apache.log4j.Logger;
+
+public class LoggingTest {
+	
+	// Logger 클래스의 인스턴스를 받아온다.
+	static Logger logger = Logger.getLogger(LoggingTest.class);
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,77 @@
+package kr.or.ddit.board.service;
+
+import java.util.List;
+
+import kr.or.ddit.board.vo.BoardVO;
+
+public class BoardServiceImpl implements IBoardService{
+
+	
+	
+	@Override
+	public List<BoardVO> selectBoard() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> selectAllBoard() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insertBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteBoard(int board_num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void insertReply(ReplyVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateReply(ReplyVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteReply(int reply_num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<ReplyVO> selectReply(int board_num) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void IncrementHit(int board_num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int selectAllCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

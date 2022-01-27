@@ -1,0 +1,9 @@
+package kr.or.ddit.basic;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/servletTest03.do")
+public class ServletTest03 extends HttpServlet {
+
+}

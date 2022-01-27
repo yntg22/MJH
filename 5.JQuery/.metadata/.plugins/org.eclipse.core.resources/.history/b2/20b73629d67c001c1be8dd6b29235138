@@ -1,0 +1,34 @@
+package kr.or.ddit.board.dao;
+
+import java.util.List;
+
+import kr.or.ddit.board.vo.BoardVO;
+
+public interface IBoardDao {
+
+	
+	// 전체리스트 가져오기
+	public List<BoardVO> selectBoard();
+	
+	// 페이지별 리스트 가져오기 - 검색 포함
+	
+	// 글저장
+	public String insertGul(BoardVO vo);
+	// 글삭제
+	public String deleteGul(BoardVO vo);
+	// 글수정
+	public String changeGul(BoardVO vo);
+	// 댓글 등록
+//	public String insertComment
+	// 댓글 수정
+	
+	// 댓글 삭제
+	
+	// 조회수 증가
+	
+	// 댓글 리스트
+	
+	// 전체 글 갯수 가져오기
+		
+	
+}

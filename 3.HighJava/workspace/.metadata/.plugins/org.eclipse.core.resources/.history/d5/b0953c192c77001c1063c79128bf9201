@@ -1,0 +1,157 @@
+package kr.or.ddit.board.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+
+import kr.or.ddit.board.vo.BoardVO;
+import kr.or.ddit.util.SqlMapClientFactory;
+
+public class BoardDaoImpl implements IBoardDao {
+	private SqlMapClient smc;
+	
+	//1
+	private static BoardDaoImpl dao;
+	
+	//2
+	private BoardDaoImpl() {
+		smc = SqlMapClientFactory.getSqlMapClient();
+	}
+		
+	//3
+	public static BoardDaoImpl getInstance() {
+		if(dao==null) dao = new BoardDaoImpl();
+		
+		return dao;
+	}
+
+	@Override
+	public int insertBoard(BoardVO boardVo) {
+		int cnt = 0;
+		try {
+			Object obj = smc.insert("board.insertBoard",boardVo);
+			if(obj == null) {
+				cnt = 1;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return cnt;
+	}
+
+	@Override
+	public int deleteBoard(int boardNum) {
+		int cnt = 0;
+		try {
+			cnt = smc.delete("board.deleteBoard",boardNum);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		return cnt;
+	}
+
+	@Override
+	public int updateBoard(BoardVO boardVo) {
+		int cnt = 0;
+		try {
+			cnt = smc.update("board.updateBoard",boardVo);
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		return cnt;
+	}
+
+	@Override
+	public List<BoardVO> getAllBoard() {
+		List<BoardVO> boardList = new ArrayList<>();
+		
+		try {
+				boardList = smc.queryForList("board.getAllBoard");
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		return boardList;
+	}
+
+	@Override
+	public List<BoardVO> searchBoard(String boardTitle) {
+		List<BoardVO> boardList = new ArrayList<>();
+		
+		try {
+			
+			boardList = smc.queryForObject("board.searchBoard");
+			
+			
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		} 
+		return boardList;
+	}
+
+	@Override
+	public BoardVO selectBoard(int boardNo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		BoardVO boardVo = new BoardVO();
+	try {
+		String sql = "select * from jdbc_board where board_no = ?";
+		conn = DBUtil3.getConnection();
+		pstmt = conn.prepareStatement(sql);
+		
+		pstmt.setInt(1, boardNo);
+		
+		rs = pstmt.executeQuery();
+			rs.next();
+			boardVo.setBoard_no(rs.getInt("board_no"));
+			boardVo.setBoard_title(rs.getString("board_title"));
+			boardVo.setBoard_writer(rs.getString("board_writer"));
+			boardVo.setBoard_content(rs.getString("board_content"));
+			boardVo.setBoard_date(rs.getString("board_date"));
+			boardVo.setBoard_cnt(rs.getInt("board_cnt"));
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if(rs!=null)try {rs.close();}catch(SQLException e) {}
+			if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
+			if(conn!=null) try { conn.close(); } catch (SQLException e) {}
+		}	
+		try {
+			
+			String sql = "update jdbc_board set board_cnt=board_cnt+1 where board_no = ?";
+			conn = DBUtil3.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, boardNo);
+			pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			
+		} finally {
+			if(pstmt!=null) try { pstmt.close(); } catch (SQLException e) {}
+			if(conn!=null) try { conn.close(); } catch (SQLException e) {}
+		}
+	
+	
+	
+		
+		return boardVo;
+	}
+
+	
+
+}

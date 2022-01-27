@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src=../js/jquery-3.6.0.min.js></script>
+<script>
+$(function(){
+	$('#btn1').on('click', function(){
+		$.ajax({
+			url : 'lprod.jsp',
+			type : 'get',
+			dataType : 'json',
+			error : function(xhr){
+				alert('상태 : ' + xhr.status);
+			},
+			success : function(res){
+				//option생성 - #lprod에 출력
+				code = "";
+		
+				$.each(res,function(i,v){ 	
+				
+					code += "<option value='"+v.nm+"'>" + v.gu + "</option>";
+				$('#lprod').html(code);
+	
+				})
+			
+			}
+		})
+	})
+})
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" id="btn1">
+	<div id="result1">
+	<select name ="lprod" id="lprod"></select>
+	<select name="prod" id="prod"></select>
+	</div>
+</div>
+</body>
+</html>

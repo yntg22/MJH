@@ -1,0 +1,21 @@
+package kr.or.ddit.basic.session;
+
+
+
+public class MemberDaoImpl {
+	// 1번
+	private static MemberDaoImpl dao;
+	
+	// 2번
+	private MemberDaoImpl() { }
+	
+	// 3번
+	public static MemberDaoImpl getInstance() {
+		if(dao==null) dao = new MemberDaoImpl();
+		
+		return dao;
+	}
+	
+}
+	
+	

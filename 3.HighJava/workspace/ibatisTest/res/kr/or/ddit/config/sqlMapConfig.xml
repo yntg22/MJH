@@ -26,6 +26,7 @@
 	  -->
 	  <typeAlias alias="lprodVo" type="kr.or.ddit.basic.LprodVO"/>
 	  <typeAlias alias="memberVo" type="kr.or.ddit.mvc.vo.MemberVO"/>
+	  <typeAlias alias="boardVo" type="kr.or.ddit.board.vo.BoardVO"/>
 	  <!--
 	 	DB와 연결을 처리하는 부분 
 	   -->
@@ -45,7 +46,7 @@
 	   	  
 	   	  형식) <sqlMap resource="경로명/파일명.xml"/>
 	    -->
-	   <sqlMap resource="kr/or/ddit/mapping/ibatisTest.xml"/>
-	   <sqlMap resource="kr/or/ddit/mapping/jdbc.xml"/>
+	   
 	   <sqlMap resource="kr/or/ddit/mapping/mymember.xml"/>
+	   <sqlMap resource="kr/or/ddit/mapping/board.xml"/>
 </sqlMapConfig>

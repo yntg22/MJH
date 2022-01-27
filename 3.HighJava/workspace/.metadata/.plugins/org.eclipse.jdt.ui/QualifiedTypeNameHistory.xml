@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpFileServer"/>
-<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="java.net.DatagramSocket"/>
@@ -40,7 +38,6 @@
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil3"/>
 <fullyQualifiedTypeName name="kr.or.ddit.board.dao.IBoardDao"/>
 <fullyQualifiedTypeName name="kr.or.ddit.board.dao.BoardDaoImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.board.service.IBoardService"/>
@@ -49,7 +46,6 @@
 <fullyQualifiedTypeName name="kr.or.ddit.board.vo.BoardVO"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
@@ -57,7 +53,11 @@
 <fullyQualifiedTypeName name="com.ibatis.common.resources.Resources"/>
 <fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClientBuilder"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="kr.or.ddit.mvc.vo.MemberVO"/>
 <fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
 <fullyQualifiedTypeName name="kr.or.ddit.util.SqlMapClientFactory"/>
-<fullyQualifiedTypeName name="kr.or.ddit.mvc.vo.MemberVO"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Level"/>
+<fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil3"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
 </qualifiedTypeNameHistroy>

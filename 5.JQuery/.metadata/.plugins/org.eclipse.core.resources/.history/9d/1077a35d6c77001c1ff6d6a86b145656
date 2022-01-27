@@ -1,0 +1,40 @@
+<%@page import="kr.or.ddit.prod.vo.ProdVO"%>
+<%@page import="java.util.List"%>
+<%@page import="kr.or.ddit.config.SqlMapClientFactory"%>
+<%@page import="com.ibatis.sqlmap.client.SqlMapClient"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+    
+    <%
+    
+    	SqlMapClient client = SqlMapClientFactory.getSqlMapClient();
+    
+    	List<ProdVO> list = client.queryForList("prod.selectprod");
+    %>
+    
+    [
+    	<%
+    		for(int i=0;i<list.size();i++){
+    			ProdVO vo = list.get(i);
+    			if(i > 0 ) out.print(",");
+    		%>
+    		{
+    			"buyer" : "<%=vo.getProd_buyer() %>",
+    			"cost" : "<%=vo.getProd_cost() %>",
+    			"detail" : "<%=vo.getProd_detail() %>",
+    			"id" : "<%=vo.getProd_id() %>",
+    			"lgu" : "<%=vo.getProd_lgu() %>",
+    			"name" : "<%=vo.getProd_name() %>",
+    			"outline" : "<%=vo.getProd_outline() %>",
+    			"price" : "<%=vo.getProd_price() %>",
+    			"sale" : "<%=vo.getProd_sale() %>",
+    		}
+    			
+    	<%		
+    		}
+    	%>
+    ]
+    
+    
+    

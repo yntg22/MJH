@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src=../js/jquery-3.6.0.min.js></script>
+<script>
+$(function(){
+	$('#btn1').on('click', function(){
+		$.ajax({
+			url : 'lprod.jsp',
+			type : 'get',
+			dataType : 'json',
+			error : function(xhr){
+				alert('상태 : ' + xhr.status);
+			},
+			success : function(res){
+				//option생성 - #lprod에 출력
+				code = "";
+				$.each(res,function(i,v){ 	
+				code += "<option value='"+v.gu+"'>" + v.nm + "</option>";
+				$('#lprod').html(code);
+	
+				})
+			
+			}
+		})
+	})
+	
+	//lprod를 선택하면 lprod_gu 값과 prod_lgu를 비교하여 prod_id와 prod_name을 출력
+	$('#lprod').on('change', function(){
+		//선택한 option의 value값을 가져온다
+// 		lgu = $(this).val();
+		lgu = $('option:selected', this).val();
+		$.ajax({
+			url : 'prod.jsp',
+			data : {"lgu" : lgu},
+			type : 'get',
+			success : function(res){
+				 code = "";
+	               
+	               $.each(res, function(i, v){
+	                  
+	                  code += "<option value='"+v.prod_id+"'>" + v.prod_name;
+	                  code += "</option>";
+	               })
+	               
+	               $('#prod').html(code);
+
+			},
+			error : function(xhr){
+				alert("상태 : " + xhr.status);	
+			},
+			dataType : 'json'
+		})
+	})
+	
+	 $('#prod').on('change', function(){
+         prodId = $(this).val();
+         
+         $.ajax({
+            url : 'proddetail.jsp',
+            data : {"prodID" : prodId},
+            type : 'get',
+            success: function(res){
+               code = "<table>";
+               code += "<tr><td>항목</td><td>내용</td></tr>";
+               code += "<tr><td>PROD_ID        </td><td>  " + res.id + "</td></tr>";
+               code += "<tr><td>PROD_NAME      </td><td>  " + res.name + "</td></tr>";
+               code += "<tr><td>PROD_LGU       </td><td>  " + res.lgu + "</td></tr>";
+               code += "<tr><td>PROD_BUYER     </td><td>  " + res.buyer + "</td></tr>";
+               code += "<tr><td>PROD_PRICE     </td><td>  " + res.price + "</td></tr>";
+               code += "<tr><td>PROD_COST      </td><td>  " + res.cost + "</td></tr>";               
+               code += "<tr><td>PROD_SALE      </td><td>  " + res.sale + "</td></tr>";
+               code += "<tr><td>PROD_OUTLINE   </td><td>  " + res.outline + "</td></tr>";
+               code += "<tr><td>PROD_DETAIL    </td><td>  " + res.detail + "</td></tr>";
+
+               code += "</table>";
+               
+               $('#result1').html(code);
+            },
+            error : function(xhr){
+               alert('상태 : ' + xhr.status);
+            },
+            dataType : 'json'
+         })
+         
+      })
+      
+   })   
+
+})
+</script>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	<input type="button" value="확인" id="btn1">
+	<div id="result1">
+	<select name ="lprod" id="lprod"></select>
+	<select name="prod" id="prod"></select>
+	</div>
+</div>
+</body>
+</html>

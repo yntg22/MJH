@@ -1,0 +1,30 @@
+package kr.or.ddit.basic.session;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import kr.or.ddit.util.DBUtil3;
+
+public class MemberDaoImpl implements IMemberDao{
+	// 1번
+	private static MemberDaoImpl dao;
+	
+	// 2번
+	private MemberDaoImpl() { }
+	
+	// 3번
+	public static MemberDaoImpl getInstance() {
+		if(dao==null) dao = new MemberDaoImpl();
+		
+		return dao;
+	}
+	
+}
+	
+	

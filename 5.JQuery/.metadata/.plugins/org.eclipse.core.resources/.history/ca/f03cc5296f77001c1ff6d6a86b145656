@@ -1,0 +1,12 @@
+package kr.or.ddit.prod.vo;
+
+public class ProdVO {
+	private String lprod_id;
+	private String lprod_nm;
+	private String lprod_gu;
+	private String prod_id;
+	private String prod_name;
+
+	
+	
+}

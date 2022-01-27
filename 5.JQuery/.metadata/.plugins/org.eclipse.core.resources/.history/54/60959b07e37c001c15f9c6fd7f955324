@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<sqlMap namespace="board">
+	<select id="selectBoard" resultClass="boardVO"><!--resultMap 쓸때 a.vo b.vo에도 없을때 c.vo를 만들때(조인)  -->
+		select * from board1
+	</select>
+	
+	<insert id="insertBoard" parameterClass="boardVO">
+		insert into board1 (num,subject,writer,mail,password,content,hit,wip,wdate)
+		values(#num#,#subject#,#writer#,#mail#,#password#,#content#,0,#wip#,sysdate)
+		<selectKey keyProperty="num" resultClass="int">
+			select num from board1 where num = #num#
+		</selectKey>	
+	</insert>
+	
+	<delete id="deleteBoard" parameterClass="int">
+		delete from board1 
+		where num=#num#
+	</delete>
+
+	<update id="updateBoard" parameterClass="boardVO">
+		update board1 
+		set subject=#subject#, writer=#writer#, mail=#mail#, password=#password#,content=#content# 
+		where num=#num#
+	</update>
+
+	<insert id="insertReply" parameterClass="replyVO">
+		insert into reply (renum,bonum,name,cont,redate)
+		values(#renum#,#bonum#,#name#,#cont#,sysdate)
+		<selectKey keyProperty="renum" resultClass="int">
+			select renum from reply where renum =#renum#
+		</selectKey>
+	</insert>
+	
+	<insert id="updateReply" parameterClass="replyVO">
+		update reply set name=#name#, cont=#cont# where renum=#renum#
+	</insert>
+
+	<delete id="deleteReply" parameterClass="int">
+		delete from reply where renum = #renum#
+	</delete>
+	
+	<select id="selectReply" resultClass="replyVO">
+		select * from reply
+	</select>
+	
+	<update id="updateHit" parameterClass="int">
+		update board1 set hit = hit +1 where num = #num#
+	</update>
+	
+	<select id="selectBoardCount" resultClass="int">
+		select count(*) from board1
+	</select>
+
+
+
+</sqlMap>

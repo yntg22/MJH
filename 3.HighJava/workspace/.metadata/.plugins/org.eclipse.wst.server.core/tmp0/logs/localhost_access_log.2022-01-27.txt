@@ -1,0 +1,15 @@
+127.0.0.1 - - [27/Jan/2022:09:51:21 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:09:51:22 +0900] "GET /servletTest/basic/jsonTest/lprodList.jsp HTTP/1.1" 200 1257
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:09:51:22 +0900] "GET /servletTest/basic/js/jquery-3.6.0.min.js HTTP/1.1" 200 89501
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:09:51:22 +0900] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:09:51:25 +0900] "GET /servletTest%20/lprodListNonAjaxServlet.do HTTP/1.1" 404 1119
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:09:52:18 +0900] "GET /servletTest/basic/jsonTest/lprodList.jsp HTTP/1.1" 200 1256
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:09:52:19 +0900] "GET /servletTest/lprodListNonAjaxServlet.do HTTP/1.1" 200 1163
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:10:01:40 +0900] "GET /servletTest/lprodListNonAjaxServlet.do HTTP/1.1" 200 1193
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:10:01:40 +0900] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:10:01:40 +0900] "GET /servletTest/lprodListNonAjaxServlet.do HTTP/1.1" 200 1193
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:10:01:40 +0900] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:10:01:40 +0900] "GET /servletTest/lprodListNonAjaxServlet.do HTTP/1.1" 200 1193
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:10:01:40 +0900] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:10:01:40 +0900] "GET /servletTest/lprodListNonAjaxServlet.do HTTP/1.1" 200 1193
+0:0:0:0:0:0:0:1 - - [27/Jan/2022:10:01:40 +0900] "GET /favicon.ico HTTP/1.1" 404 1085

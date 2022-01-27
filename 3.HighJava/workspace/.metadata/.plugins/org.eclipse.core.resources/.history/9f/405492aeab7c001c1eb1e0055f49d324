@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>servletTest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>servletTest01</servlet-name>
+    <servlet-class>kr.or.ddit.basic.ServletTest01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servletTest01</servlet-name>
+    <url-pattern>/servletTest01.do</url-pattern>
+  </servlet-mapping>
+  <!-- 
+  	초기화 파라미터는 <context-param>태그를 이용하여 구성한다.
+  	이 태그 안에 자식 태그로 <param-name>태그와 <param-value>태그에
+  	필요한 값을 설정한다.
+   -->
+   <context-param>
+   	<param-name>userName</param-name>
+   	<param-value>홍길동</param-value>
+   </context-param>
+</web-app>
