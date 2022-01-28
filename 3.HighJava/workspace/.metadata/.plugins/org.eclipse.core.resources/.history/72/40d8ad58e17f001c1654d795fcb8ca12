@@ -1,0 +1,27 @@
+package kr.or.ddit.member.dao;
+
+import java.util.List;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+
+import kr.or.ddit.member.vo.MemberVO;
+import kr.or.ddit.util.SqlMapClientFactory;
+
+public class MemberDaoImpl implements IMemberDao{
+	private SqlMapClient smc;
+	
+	private static MemberDaoImpl dao;
+	
+	private MemberDaoImpl() {
+		smc = SqlMapClientFactory.getSqlMapClient();
+	}
+
+	
+	
+	@Override
+	public List<MemberVO> getAllMember() {
+		
+		return null;
+	}
+
+}
